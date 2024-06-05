@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        3 dataTypes
+
+        Primitive >> Number || String || Boolean
+        Composite >> Arrays || Object
+        Trivial >> undefined || null || empty
+     -->
+
+     <!-- Primitive Dattype
+        Number || String || Boolean
+
+        Number >> 
+        90
+        78.9
+
+    -->
+    <script>
+        console.log("Number")
+        console.log(2)
+        console.log(2.4)
+        //typeof
+        console.log(typeof(2))
+        console.log(typeof(2.4))
+        console.log(1+1)
+        // String
+        //"" Anything
+        console.log("Hi")
+        console.log("Hello")
+        console.log(typeof("Hi"))
+        console.log(typeof("Hello"))
+        console.log(typeof('2'))// 2 seems a number but its a string
+        console.log('2'+'2')//22
+        console.log('2'+2)//22
+        console.log('1'+2+'2')//122
+        console.log('1'+1+1+1+'2')//11112
+        console.log('1'+1+'23'+1+1+1+1+100)//11231111100
+        console.log(1+1+1+1+'23'+1+1+'56')//4231156
+        // string +string=string
+        //string+number=string
+        //number+string=string
+        console.log(typeof(1+1+1+1+'23'+1+1+'56'))//string
+
+        //Boolean
+        // true|| false
+        console.log(true)
+        console.log(typeof(true))//boolean
+        console.log(false)
+        console.log(typeof(false))//boolean
+        console.log("true")
+        console.log(typeof("true"))
+        console.log("false")
+        console.log(typeof("false"))
+        
+
+        //undefined  >> When you define/declare a varible and you dont assign value to it 
+        var a; 
+        console.log(a)
+
+        //undefined --declare a varible and you dont assign value to it 
+        
+        //not defined -- directly try to access that varibale without declartion
+       // console.log(x)// 03datatypes.html:71 Uncaught ReferenceError: x is not defined
+
+
+        // Composite > Arrays || Objects
+        //Arrays
+        // arrays are of heterogenous datatypes
+        // [] respresented inside square bracket
+        // index starts at 0 > knowing the posotion of the element || to access the element        
+        //  Propert called .length >> to check the length of particular
+          var arr=[23,56,90,78,16]
+          console.log(arr)
+          //arr[indexno] // 0-4  || for loop in your i
+          arr[2]
+          arr.length
+
+          // 78 as 800
+          arr[3]=800 // if index no is prsesent >> update
+          console.log(arr)
+          arr[5]=6
+          console.log(arr) // if index no is not prsesent >> insert
+
+        //   array  
+          //for loop > array i=0;
+          //for of 
+
+        //   loop >> crashing the system
+        // start Point          > 0 ||1
+        // end point            > condition we provide >> until its true || once its false loop terminates
+        // Incremeent/Decrement > ++ /--
+
+        // To print  1 to 5
+        // SP > 1          i=0;  INititalizing 
+        // EP > 5          i<=5; condition 
+        // Inc> ++         i++   Inc/dec ++/--
+        var str65=""
+        for(var i=1;i<=5;i++){
+            console.log(i)
+            str65+=i;
+        }
+        console.log(str65)
+
+        //1  1<=5 T  > Running
+        //2  2<=5 T  > Running
+        //3  3<=5 T  > Running
+        //4  4<=5 T  > Running
+        //5  5<=5 T  > Running
+        //6  6<=5 F  > Termination 
+        console.log("Task")
+        // Print the array elements along with index no
+        // Element __ is placed at __ index no.
+        for(var i=0;i<arr.length;i++){
+            //console.log(i)
+            //console.log(arr[i])
+            console.log("Element " +arr[i]+" is placed at "+i+" index no.")
+        }
+
+        // Print a table of 5 using forloop
+
+        for(var i=1;i<=10;i++){
+            console.log(5*i)
+        }
+        var n=1100;
+        for(var i=1;i<=10;i++){
+            console.log(n+" * "+i+" = "+n*i)
+        }
+
+        var arr1=[1,4,67,89,90]
+        // Even || Odd
+        
+            12345 //> j value    =25                
+        1// ***** i
+        2// ***** 1
+        3// *****
+        4// *****
+        5// *****
+
+        // console.log("*****")
+        // console.log("*****")
+        // console.log("*****")
+        // console.log("*****")
+        // console.log("*****")
+
+        var str=""
+        for(var i=1;i<=5;i++){//outer loop // rows 
+            // console.log("*****") 
+            //console.log(i)
+            for(var j=1;j<=5;j++){// 5 stars
+                //console.log("*") 25 stars
+                str+="*"
+            }
+            str+="\n"// next line || new line
+        }
+        console.log(str)
+        // *****
+        // ****
+        // ***
+        // **
+        // *
+            12345//(col)> vertical  Printing
+        1// *
+        2// **
+        3// ***
+        4// ****
+        5// *****
+        //i(row)> horizontal
+
+        // i=1 ; j=1; *
+        // i=2;  j=2 (2 times ) "**" j=i
+        // i=3 ; j=3  (3 times) "***"
+
+        var str=""
+        for(var i=1;i<=5;i++){//outer loop // rows 
+            // console.log("*****") 
+            //console.log(i)
+            for(var j=1;j<=i;j++){// 5 stars
+                //console.log("*") 25 stars
+                str+="*"// "***** +\n+*****""
+            }
+            str+="\n"// next line || new line
+        }
+        console.log(str)
+
+
+
+
+
+</script>
+</body>
+</html>

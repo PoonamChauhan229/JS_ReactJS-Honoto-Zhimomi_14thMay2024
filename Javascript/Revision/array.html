@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Array:
+Represented inside []
+hetergenous datatypes sepearted by commas
+
+let arr=["hello",56,true,"78","true"]
+            0     1   2   3     4...
+
+["hey"]
+   0
+
+["yuuiui lklklk hjkjkjk"]
+           0
+
+each item >element
+indexes in array
+array starts at index 0    > 4 index 
+array length start from 1  > 5 length
+
+
+access the elemnts of array
+index no to access
+arrayname[indexno]
+
+arr[2]
+arr[3]
+<script>
+    let arr=["hellooooo",56,true,78,"true"]
+    console.log(arr)
+    //index > 4
+    //length> 5  || holds elements
+
+
+    //length
+    console.log(arr.length)// array 
+    console.log(arr[0].length)//length of 1st element which is lying at 0th index
+
+    //get the length of each element
+    console.log(arr[1].toString().length)
+    console.log("Loop Started")
+    ///4 repeated 
+    // loops 
+    //avoid of any item 
+    for(var i=0;i<arr.length;i++){
+        console.log(arr[i].toString().length)
+    }
+    console.log("Map Started")
+    // map()
+    arr.map((element)=>console.log(element.toString().length))
+
+    //enter at 5th index > "Javascript" elemnt
+    arr[5]="Javascript"
+    console.log(arr)
+
+    // update 56 to 768
+    // >> 56 is lying
+    arr[1]=768
+    console.log(arr)
+
+
+
+    
+    
+</script>
+</body>
+</html>

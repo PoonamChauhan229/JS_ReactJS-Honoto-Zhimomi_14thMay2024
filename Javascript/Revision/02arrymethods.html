@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // map method
+        // loops 
+
+        // array methods
+        let arr=[10,20,30,40,50,3,7,9]
+        // syntax
+        // arr.map(()=>{})//() element,index
+        arr.map((element,index)=>console.log(element,index))//debugging
+        // transform ur array
+        // 2*element
+        arr.map((element)=>console.log(element*2))//debug
+        //map returns an array
+        let newarr=arr.map((element)=>element*2)
+        console.log(newarr)
+
+        console.log(arr)
+        //map(()=>{})
+        //return a new array without doing any chnage in existing array
+        //modify the element depending upon the critiria mentioned
+
+
+        //filter > 
+        //example tea > take the tea || extract we threw without minding it 
+        //true value and false value will be ignored
+        //if condition >>> true value will be executed and taken ahead
+        // if else > 
+        if(false){
+            console.log(1)
+        }
+        let arr1=[10,20,30,40,50,3,7,9]
+        // even and odd
+        //filter find both
+        //either find even || odd
+         //return a new array without doing any chnage in existing array
+
+        // syntax
+        // arr.filter(()=>{})//element, index
+        //even >> %2==0
+        arr1.filter((element)=>console.log(element%2==0))
+        let newarr1=arr1.filter((element)=>element%2==0)
+        console.log(newarr1)// odd no are ignored > false values
+        //odd
+        let newarr2=arr1.filter((element)=>element%2!==0)
+        console.log(newarr2)//even no are ignored> false values
+        console.log(arr1)
+
+        //reduce method
+        //reduction 
+        //single value
+        let arr2=[10,20,30,40,50,3,7,9]
+        // syntax
+        // arr1.reduce(()=>{})
+        //()>> currentvalue,accumulator || cv,acc
+        //find out of the sum using for loop
+
+        let newarr3=arr2.reduce((acc,cv)=>cv+acc)//sum(acc)+arr[i](element,cv)
+        console.log(newarr3)//169
+
+       //1000+arrvalues 
+        let newarr4=arr2.reduce((acc,cv)=>cv+acc,100)
+        console.log(newarr4)//269
+
+        //include > true /false
+        let a=arr2.includes(10)
+        console.log(a)
+        if(a){
+            console.log("Included in the team")
+            //push method
+            
+        }else{
+            console.log("Excluded from the team")
+        }
+    </script>
+</body>
+</html>

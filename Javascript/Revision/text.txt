@@ -1,0 +1,14 @@
+JS > Datatypes --SKIP ==> OBJECTS + ARRAYS
+   > Keywords
+   > Operators + Conditions + Loops
+   > Array Methods +String Methods
+   > Functions
+   > DOM ==> HTML + CSS + JS
+   > Events Handlers
+   > ADJS >> 
+   > Callback
+   > Closures
+   > BOM 
+   > Fetch, Promises, async await
+   > Logical Coding
+   > ES6 Concepts

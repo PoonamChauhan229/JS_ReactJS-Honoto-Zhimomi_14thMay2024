@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         x=70;//declared +assigned
+        console.log(x)
+         x=90;//redeclare +reassigned
+        console.log(x)
+        x=80;//reassigned
+        console.log(x)
+        x=100;
+        console.log(x)
+        console.log("Let starts-------")
+
+        let y=70;//declared +assigned
+        console.log(y)
+        // let y=90;//redeclare +reassigned || Identifier 'y' has already been declared 
+        console.log(y)
+        y=80;//reassigned
+        console.log(y)
+        y=100;
+        console.log(y)
+
+        console.log("Const starts-------")
+        
+        const z=90; //Missing initializer in const declaration
+        console.log(z)
+       // const z=80;//Identifier 'z' has already been declared 
+
+        console.log("Scope Starts....")
+
+       //scope
+
+     // var 
+     //let
+     //const
+
+     //var
+    {
+        var x=56;//global variable
+        console.log(x)
+     }
+     console.log(x)//56  >>> var keywords only follows functional scope || global 
+
+     {
+        console.log(x)
+     }
+    
+     //var only functional scope
+      function test(){
+        var w=89;
+        console.log(w)
+      }  
+      test()
+      //console.log(w)// not defined
+
+   //global scope
+     var a=90;//gV
+     let b=80;//gv
+     const c=70;  //gv 
+     {
+        //block of code
+        console.log(a,b,c)
+     }   
+
+      ///let keyword
+    {
+        let o=100;
+        console.log(o)//100
+        {
+            console.log(o)//100
+            let r=80;
+            console.log(r)//80
+        }
+        console.log(r)
+        {
+            console.log(o)
+            console.log(r)//not defined
+        }
+    }
+    console.log(o)//error >> not defined
+
+
+
+    // question
+    console.log(b2)//undefined >> hoisting
+    let a1=90;
+    var b2=45;
+    {
+        console.log(d1)//error
+        console.log(a1)//90
+        console.log(b2)//45
+        let d1=67;
+        console.log(d1)//67
+
+
+        {
+            let e1=89;
+            console.log(e1)//89
+            console.log(d1)//67
+        }
+        console.log(e1)//error
+        console.log(d1)//67
+        console.log(b2)//45
+        console.log(a1)//90
+    }
+        console.log(e1)//error
+        console.log(d1)//error
+        console.log(b2)//45
+        console.log(a1)//90
+
+
+
+        console.log(e2)//error >>
+        const e2=56;
+        {
+            console.log(e2)//56>> global scope
+            const r5=90;
+            console.log(r5)//90
+        }
+        console.log(e2)//56
+        console.log(r5)//error
+
+
+    </script>
+</body>
+</html>
