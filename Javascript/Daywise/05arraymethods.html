@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // () Method
+        // MRF
+        // Most used Method 
+        // MAP> works on each element + new array +og array is not affected
+        //    > function as an parameter
+         let arr=[10,3,4,5]
+        //  O/P  [2,6,8,10]
+        arr.map((element,index)=>console.log(element,index))
+        //ur entire method > store in a variable > console.log that variable
+        let res=arr.map((element)=>element*2)
+        console.log(res)
+
+        // array of objects
+        // [{},{},{}]
+        //  0   1  2
+        
+        const kvArray = [
+                            { roll: 1, marks: 10 },
+                            { roll: 2, marks: 20 },
+                            { roll: 3, marks: 30 },
+                        ];
+        //  marks +30
+        let arr1=["20","30","40"] //[50,60,70]
+        //element >> Integer/Number
+        //parseInt()  >> String to Number/
+        let res1 =arr1.map((element)=>parseInt(element)+30)
+        console.log(res1)
+
+        console.log(parseInt("20"))//20
+        console.log(parseInt("20A"))//20
+        console.log(parseInt("A20"))// NAN
+        console.log(parseInt(" 20"))//20
+        console.log(parseInt("20 2"))//20
+        console.log(parseInt("2A0"))//2
+        console.log(parseInt("RT20"))//NAN
+        console.log(parseInt("20.78"))//20
+
+        Number
+        console.log(Number("20"))//20
+        console.log(Number("20A"))//NAN
+        console.log(Number("A20"))//NAN
+        console.log(Number(" 20"))//20
+        console.log(Number("20 4"))//NAN
+        console.log(Number("20.4"))//20.4
+
+        parseFloat
+        console.log(parseFloat("20.67"))//20.67
+        console.log(parseFloat("20.67A"))//20.67
+        console.log(parseFloat("A20.67"))//NAN
+        console.log(parseFloat(" 20.67"))//20.67
+        console.log(parseFloat("20 .67"))//20
+        console.log(parseFloat("20.A67"))//20
+
+
+        // filter Method 
+        // filter and give you the true values
+        // false values are ignored
+        // condition > statisfied > true          >>> output 
+                   //> not statisfied > false     >>> ignored
+        // featutres > map
+      // prime number 
+
+    //   let arr=[10,3,4,5]
+
+    const arr3 = [
+                            { roll: 1, marks: 10 },
+                            { roll: 2, marks: 20 },
+                            { roll: 3, marks: 30 },
+                 ];
+    let res5=arr3.filter((element)=>element.marks>20)
+    console.log(res5)
+    
+    let res7=res5.map((element)=>element.roll)
+    console.log(res7)
+    </script>
+</body>
+</html>
