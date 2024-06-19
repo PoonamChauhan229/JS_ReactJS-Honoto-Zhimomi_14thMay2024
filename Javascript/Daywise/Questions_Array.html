@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Write a JavaScript function to find an array containing a specific element.
+
+// Test data :
+// arr = [2, 5, 9, 6];
+// check 5
+    let arr = [2, 5, 9, 6];
+     let res1=arr.some(element=>element==5)
+     console.log(res1)  
+     
+     
+    //  How would you create a new array from an existing array where each element is squared, but only include elements that are greater than 10?
+     const numbers = [2, 5, 8, 11, 15]
+     let res15=numbers.filter((element)=>element>10).map((element)=>element*element)
+     console.log(res15)
+
+    //  How would you find if there is at least one negative number in an array?
+    const numbers1 = [1, -2, -3, 4];
+
+    let res100=numbers1.some((element)=>element<0)
+    console.log(res100)
+</script>
+</body>
+</html>

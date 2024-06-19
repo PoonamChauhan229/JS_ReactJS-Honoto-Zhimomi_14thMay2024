@@ -81,6 +81,102 @@
     
     let res7=res5.map((element)=>element.roll)
     console.log(res7)
-    </script>
+
+    // every > all || true /false >> condition
+    // some  > few || true/false  >> conidtion
+
+    const array1 = [1, 30, 39, 29, 10, 13];
+
+    let res56=array1.every((element)=>element<40)
+    console.log(res56) 
+
+    const array = [1, 2, 3, 4, 5];
+    console.log(array.some((element)=>element % 2 === 0));
+
+    //push     >> adds an elements at the end 
+    //unshift  >> adds an elements at the begining
+
+    const array2 = [1, 2, 3];
+
+    console.log(array2.unshift(4, 5));
+    // Expected output: 5
+
+    console.log(array2);
+    // Expected output: Array [4, 5, 1, 2, 3]
+
+    const animals = ['pigs', 'goats', 'sheep'];
+
+    animals.unshift('cows',"cat");
+    console.log(animals)
+
+
+    //pop > removing from the end
+    //shift > removing from the begining
+
+    const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+    plants.pop();
+    console.log(plants);
+
+    const array112 = [1, 2, 3];
+    array112.shift();
+    console.log(array112);
+
+    //join > bring all the elements of the arrays > string + joinining value >> bring together
+    //concat > bring 2 or more arrays together
+    //join || concat >> og array doesnt chnages have any affect on it
+    const elements = ['Fire', 'Air', 'Water'];
+
+    console.log(elements.join("-"))
+    console.log(elements.join("@"))
+    console.log(elements.join(","))
+    console.log(elements.join("Honoto"))
+    console.log(elements.join(" "))
+    console.log(elements.join(" 34 "))
+
+    // concat
+    const array156 = ['a', 'b', 'c'];
+    const array278 = ['d', 'e', 'f'];
+    const array389 = array156.concat(array278);
+
+    console.log(array156);
+    console.log(array278);
+    console.log(array389);
+
+    const letters = ["a", "b", "c"];
+    const numbers = [1, 2, 3];
+
+    const alphaNumeric = letters.concat(numbers);
+    console.log(alphaNumeric);
+
+    const array10 = [1, 2, 3];
+
+    array1.forEach((element)=>console.log(element+2))
+    //for Each doesnt return
+    let res10=array10.forEach((element)=>element+2)
+    console.log(res1) // undefined
+
+    array10.map((element)=>console.log(element+2))
+    //map returns array
+    let res20=array10.map((element)=>element+2)
+    console.log(res20)
+
+
+    const items = ["item1", "item2", "item3"];
+    const copyItems = [];
+
+    // before
+    for (let i = 0; i < items.length; i++) {
+    copyItems.push(items[i]);
+    }
+
+    console.log(copyItems)
+
+    // after
+    items.forEach((item) => {
+    copyItems.push(item);
+    });
+    console.log(copyItems)
+
+</script>
 </body>
 </html>

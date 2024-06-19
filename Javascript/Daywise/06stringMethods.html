@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str01="WELCOME"
+        console.log(str01.length)
+        //concat()
+        let str02="Hello World"
+        console.log(str01.concat(" ",str02," ",str02," ",str01," ","THE JS"))
+
+        const hello = "Hello,";
+        console.log(hello.concat(" ","Honoto", ". ","Have a nice day."));
+
+        // includes()
+        const sentence = 'The quick brown fox jumps over the lazy dog.';
+        // console.log(sentence.includes('Honoto'))
+
+        let arr1=[1,22,33,44,66] // true
+        let arr2=[1,122,133,4,66]// true
+        let arr3=[1,122,134,6,66]// true
+        let arr4=[1,12,3,66,89,90]// false
+
+        // > 4 is existing then you give true
+
+        function checkFour(array){    
+           // console.log(array)
+           console.log(typeof(array.join("")))
+            console.log(array.join("").includes(4))
+        }
+        checkFour(arr1)
+        checkFour(arr2)
+        checkFour(arr3)
+        checkFour(arr4)
+
+
+    </script>
+</body>
+</html>
