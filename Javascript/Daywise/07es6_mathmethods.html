@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //es6
+        // varibale declare > let const
+        // function         > arrow 
+
+        //objects
+        //destructing
+        //spread operator
+        //rest operator
+
+        let obj ={
+            name:"honotho",
+            age:25
+        }
+        console.log(obj)
+
+        
+
+        // using 3 varibles i ask you create an object
+        let obj1={
+                schoolname:"Oxford University",
+                place:"New Delhi",
+                enrollments:1000,
+            }
+        console.log(obj1)
+
+        //variable declaration
+        let schoolname="Oxford University";
+        let place="New Delhi";
+        let enrollments=1000;
+
+        let obj2={
+            schoolname:schoolname,
+            place:place,
+            enrollments:enrollments
+        }
+        console.log(obj2)
+        //es6 
+            // >ur key:value pair is same then u mention the key
+            // > rest will be taken care of JS itself
+       
+            let obj3={schoolname,place,enrollments}
+            console.log(obj3)
+
+
+            // Destructing >> unpack them
+            // array [] || objects {}
+            let arr1=["honoto","javascript","northeast","23"]
+            console.log(arr1[0],arr1[1])// index no  dependent
+
+            //es6
+            // array doesnt have keys, privelege to choose
+            let[firstname,course,address,age]=arr1
+            console.log(age,firstname,address,course)
+
+            console.log(`My name is ${firstname} , i belong to ${address} as my age is ${age} so i planned to learn ${course}`)
+
+            // object
+            let obj5={
+                schoolname1:"Oxford University",
+                place1:"New Delhi",
+                enrollments1:1000,
+            }
+            console.log(obj5.schoolname1,obj5.enrollments1)
+            //es6
+            // Object have  keys, ***no privelege to choose
+            let {schoolname1,place1,enrollments1}=obj5
+
+            console.log(schoolname1,place1,enrollments1)
+
+
+
+
+
+
+            //spread operator > spreading out. > ...variblename
+
+            let a1=[45,89,90]
+            console.log(...a1)
+
+            let a2=[67,89,450]
+            console.log([...a2,...a1])// arr.concat()
+
+            let a3=[100,200,300,400] // convert arr to object 
+            console.log({...a3})
+
+            const parts = ["shoulders", "knees"];
+            const lyrics = ["head", ...parts, "and", "toes"];
+            //  ["head", "shoulders", "knees", "and", "toes"]// arr.concat()
+            console.log(lyrics)
+
+            // react > making a copy  // shallow copy
+            let a4=[78,56,34]
+            let a5=[...a4]
+            console.log(a4)
+            console.log(a5)
+
+            const obj11 = { foo: "bar", x: 42 };
+            const obj21 = { bar: "baz", y: 13 };
+
+            const mergedObj = { ...obj11, ...obj21 };
+            // { foo: "bar", x: 42, bar: "baz", y: 13 }
+            console.log(mergedObj)
+
+            //shallow copy of obj11 in clonedobj
+            const clonedObj = { ...obj11 };
+            // { foo: "bar", x: 42 }
+            console.log(clonedObj)
+
+
+            //rest opeartor|| rest parameter > inside a functions
+            // Rest parameter must be last formal parameter
+            function test(...rest){
+                // console.log(a)
+                console.log(rest)//array
+                console.log(rest.length)
+            }
+            test(1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89,1,2,6,7,545,89,67,56,90,34,23,67,12,89)
+
+
+    </script>
+</body>
+</html>

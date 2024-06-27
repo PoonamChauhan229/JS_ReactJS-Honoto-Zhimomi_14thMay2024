@@ -37,6 +37,119 @@
         checkFour(arr3)
         checkFour(arr4)
 
+        //trim() 
+        // > removes the spaces
+        // > return new string
+        let str03="            Hello    World           "
+        console.log("            Hello   World           ")
+        
+        console.log(str03.trim())
+        console.log(str03)
+
+        let str04="            XYZ            "
+        console.log(str04)
+        console.log(str04.trim())
+        console.log(str04.trimStart())
+        console.log(str04.trimEnd())
+
+        // to String
+        let num1=1223444545; // array || str
+        // let num=[12,45,78]
+        // let num="hello"
+        
+        // 1
+        // 2
+        // 3
+        // 4
+        // 4
+        // 4
+        // 5
+        // 4
+        // 5
+        let num=num1.toString()
+        for(let i=0;i<num.length;i++){
+            console.log(num[i])
+        }
+        //
+    // String.prototype.charAt()
+    // String.prototype.concat()     >coverred  >> It bring together 2 or more than 2 strings together 
+    // String.prototype.endsWith()   >covered   >>
+    // String.prototype.includes()   >covered   >> It returns boolean value if that particular string exists
+    // String.prototype.indexOf()
+    // String.prototype.match()
+    // String.prototype.matchAll()
+    // String.prototype.repeat()
+    // String.prototype.replace()      > covered  >> It replaces just 1 string with the new value which is been encountered first
+    // String.prototype.replaceAll()   > covered  >> It replaces all the string with the new value
+    // String.prototype.substring()    > covered  >> It returns the string depending upon index args we pass
+    // String.prototype.slice    ()    > covered  >> It returns the string depending upon index args we pass   
+    // String.prototype.split()        > covered  >> It Splits the string into array depending upon the args we pass
+    // String.prototype.startsWith()   > covered  >> It returns boolean values and check the from begining and as well from index position
+    // String.prototype.substring()    > covered  >> It returns the string depending upon index args we pass
+    // String.prototype.toLowerCase()  > covered  >> Converts the words/sentences to Lowercase
+    // String.prototype.toUpperCase()  > covered  >> Converts the words/sentences to Uppercase
+    // String.prototype.toString()     > covered  >> Converts any datatype into String  
+    // String.prototype.trim()         > covered  >> Removed the spaces from left and right 
+
+        const str05 = 'The quick brown fox Jumps OVER the lazy dog.';
+        console.log(str05.toLowerCase())
+        console.log(str05.toUpperCase())
+
+        //search 
+        let searchElement="QUICK"
+        console.log(str05.includes(searchElement.toLowerCase()))
+
+        const anyString = "Mozilla";
+
+        console.log(anyString.substring(0, 1)); // "M"
+
+        console.log(anyString.substring(0, 6)); // "Mozill"
+
+        console.log(anyString.substring(4)); // "lla"
+        console.log(anyString.substring(4, 7)); // "lla"
+
+        console.log(anyString.substring(0, 7)); // "Mozilla"
+        console.log(anyString.substring(0, 10)); // "Mozilla"
+
+        let str="The Quick"
+        console.log(str.split(" "))
+
+        //replace("What needs to be replaced","Value to be updated")
+
+
+        const str1 = "The morning is upon us."; // The length of str1 is 23.
+        const str2 = str1.slice(1, 8);
+        const str4 = str1.slice(12);
+        const str5 = str1.slice(30);
+        console.log(str2); // he morn
+        console.log(str4); // is upon us.
+        console.log(str5); // ""
+
+        // const anyString = "Brave new world";
+        // console.log(`The character at index 0   is '${anyString.charAt()}'`);
+        // // No index was provided, used 0 as default
+
+        // console.log(`The character at index 0   is '${anyString.charAt(0)}'`);
+        // console.log(`The character at index 1   is '${anyString.charAt(1)}'`);
+        // console.log(`The character at index 2   is '${anyString.charAt(2)}'`);
+        // console.log(`The character at index 3   is '${anyString.charAt(3)}'`);
+        // console.log(`The character at index 4   is '${anyString.charAt(4)}'`);
+        // console.log(`The character at index 999 is '${anyString.charAt(999)}'`);
+
+        const str67="string not useful"
+        let newarr=[]
+        let newstr=""
+        let arr=str67.split(" ")
+        for(let i=0;i<arr.length;i++){
+            // console.log(arr[i].charAt(0).toUpperCase()+arr[i].substring(1))
+            newarr.push(arr[i].charAt(0).toUpperCase()+arr[i].substring(1))
+            newstr+=arr[i].charAt(0).toUpperCase()+arr[i].substring(1)+" "
+        }
+        console.log(newarr.join(" "))
+        console.log(newstr)
+
+
+
 
     </script>
 </body>
