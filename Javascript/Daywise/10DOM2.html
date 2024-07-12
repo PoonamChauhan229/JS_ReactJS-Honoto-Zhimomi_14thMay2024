@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Separate Ids  -->
+    <div id="divtag1">Hello World1</div>
+    <p id="ptag1">P Tag</p>
+    <h1 id="h1tag1">Heading Tags</h1>
+
+    <div id="divtag2">Hello World</div>
+    <p id="ptag2">P Tag</p>
+    <h1 id="h1tag2">Heading Tags</h1>
+
+    <div id="divtag3">Hello World</div>
+    <p id="ptag3">P Tag</p>
+    <h1 id="h1tag3">Heading Tags</h1>
+
+    <div id="divtag4">Hello World1</div>
+    <div id="divtag4">Hello World1</div>
+    <div id="divtag4">Hello World1</div>
+    <div id="divtag4">Hello World1</div>
+
+    <div class="classdivTag1" >A</div>
+    <p  class="classdivTag1" >B</p>
+    <h1 class="classdivTag1" >C</h1>
+    <h2 class="classdivTag1">D</h2>
+    <h3 class="classdivTag1" >E</h3>
+    <h4 class="classdivTag1" >F</h4>
+
+    <h5 id="newh1" >Z</h5>
+
+    <h5 class="newclassh1" >F</h5>
+    <h5 class="newclassh1" >A</h5>
+    <h5 class="newclassh1" >B</h5>
+    <h5 class="newclassh1" >C</h5>
+    <h5 class="newclassh1" >D</h5>
+
+</body>
+<script>
+    //15 lines(5*3)// tedious work
+    //html css js page (3 pages in total)
+    // document.getElementById('idname')  ||unique in nature idname
+    // document.getElementsByClassName()  || multiple plces class
+    // document.getElementsByTagName()     || tag 
+    // document.querySelector()
+    // document.querySelectorAll()
+    // selector > id class tag
+
+    // document.getElementById() >> only the elements with that specifc id
+    
+    let dividSelector1=document.getElementById('divtag1')
+    dividSelector1.style.color="red"
+    console.log(dividSelector1)
+
+    let dividSelector2=document.getElementById('divtag2')
+    dividSelector2.style.backgroundColor="pink"
+    console.log(dividSelector2)
+
+    let dividSelector3=document.getElementById('divtag3')
+    dividSelector3.style.border="4px solid blue"
+    dividSelector3.style.textAlign="center"
+    dividSelector3.style.width="200px"
+    console.log(dividSelector3)
+
+    let classCommonSelector=document.getElementsByClassName('classdivTag1')
+    console.log(classCommonSelector)
+    //array [1,2,3,4,5]
+  // What is this?
+    for(let i=0;i<classCommonSelector.length;i++){
+        console.log(classCommonSelector[i])
+        classCommonSelector[i].innerText="What is this?"
+    }
+
+    let pTag=document.getElementsByTagName('p')
+    console.log(pTag)
+    
+    let divTag=document.getElementsByTagName('div')
+    console.log(divTag)
+
+    let h1Tag=document.getElementsByTagName('h1')
+    console.log(h1Tag)
+
+     // document.querySelector() // ? >> CSS Selectors  id selector > #idname >> CSS Selectors class selextor > . classname
+    // document.querySelectorAll()  // ?
+
+    //CSS SElector
+    // id    #  
+    // class .
+    //tag    div{}
+
+    let h5100=document.querySelector('#newh1')
+    console.log(h5100)
+
+    let h5200=document.querySelector('.newclassh1')
+    console.log(h5200)
+
+
+    // document.querySelectorAll()
+    
+    let h5600=document.querySelectorAll('.newclassh1')
+    console.log(h5600)
+
+    let h5700=document.querySelectorAll('#newh1')
+    console.log(h5700)
+
+    // tag
+    let tag200=document.querySelector('div')
+    console.log(tag200)
+
+    let tag100=document.querySelectorAll('div')
+    console.log(tag100)
+    // ?+ Events
+    // WOM
+    // ADJS
+</script>
+</html>

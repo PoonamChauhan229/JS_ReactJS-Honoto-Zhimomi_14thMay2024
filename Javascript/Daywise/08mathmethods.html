@@ -125,7 +125,28 @@ console.log(Math.floor(-5.05));//-6
 console.log(Math.round(-5.05));//-5
 console.log(Math.ceil(-5.05));//-5
 
-Math.random()
+// Math.random() > Generate a Random Number 0-0.9(1 excluded)
+console.log(Math.random())//0-1
+console.log(Math.random()*10) //(10 will excluded)
+console.log(Math.floor(Math.random()*10)) //0-9
+
+// Math.random() * (max - min) + min
+//10-20
+console.log(Math.floor(Math.random() * (20 - 10) + 10))
+//50-60
+console.log(Math.floor(Math.random() * (60 - 50) + 50))
+// The maximum is exclusive and the minimum is inclusive
+
+let fruits=["apple","banana","orange","kiwi","cherry","dates","mangoes"]
+// min: 0> start index
+// max :6> end index || 7 > 
+// 0-7 (arr.length) 7 excluded  >> 0-6
+let min=0
+let max=fruits.length
+console.log(min,max)
+let index=Math.floor(Math.random() * (max - min) + min)
+console.log(index)
+console.log(fruits[index])
 </script>
 </body>
 

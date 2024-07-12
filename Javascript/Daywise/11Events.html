@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .divDesign{
+        height:20px;
+        width:200px;
+        color:navy;
+        background-color: blueviolet;
+        padding: 20px;
+        margin:5px;
+        display: none;
+    }
+</style>
+<body>
+    <button onclick="console.log(5+10,event)">Try Me</button>
+    <!-- Events
+     
+    Perform An Action >>> Event is Triggered >>> Output Will appear
+    EVent is nothing but an object
+
+    onClick
+    
+    
+    -->
+
+    <button onclick="getNewDiv(event)">Try New Div</button>
+    <button onclick="getAgainDiv(event)">Try Again DIv</button>
+    <button id="divbtn1">JS DIV</button>
+
+    <div id="aginDivId" class="divDesign"></div>
+    <script>
+        let aginDivId=document.getElementById('aginDivId')
+        let divbtn1=document.getElementById("divbtn1")
+        let count=0;
+        function getNewDiv(event){
+            // console.log(10+2)
+            count++;
+            console.log(event)
+            let div1=document.createElement('div')
+             div1.innerText="New DIV"+""+count
+             div1.style.display="block"
+             div1.setAttribute("class","divDesign")
+             document.body.append(div1)   
+            // 
+        }
+
+        function getAgainDiv(){
+            // count++;
+            count=count+1
+            aginDivId.innerText="Again New Div"+count
+            aginDivId.style.display="block"
+        }
+
+    //  HTML_JS
+
+    // Only with the JS >> 2 ways
+    // >1 st way
+
+    // tag.addEventListener('eventname',()=>{
+                    // block of code  
+    // })
+    // COMPLETELY WITH JS
+    divbtn1.addEventListener('click',()=>{
+        count++        
+        console.log("Btn is pressed ",count)
+        let div1=document.createElement('div')
+        div1.innerText="New JS Btn is pressed "+""+count
+        div1.style.display="block"
+        div1.setAttribute("class","divDesign")
+        div1.style.backgroundColor="pink"
+        document.body.append(div1)  
+    })
+
+    // Creating a btn in JS
+    let btnnewDiv=document.createElement('button')
+    btnnewDiv.innerText="BTN CREATED-JS"
+    document.body.append(btnnewDiv)
+
+    btnnewDiv.addEventListener('click',()=>{
+        count++        
+        console.log("Btn is pressed ",count)
+        let div1=document.createElement('p')
+        div1.innerText="DYNAMIC JS Btn is pressed "+""+count
+        div1.style.display="block"
+        div1.setAttribute("class","divDesign")
+        div1.style.backgroundColor="purple"
+        document.body.append(div1) 
+    })
+
+    //
+    let btnDivSample=document.createElement('button')
+    btnDivSample.innerText="BTN CREATED-JS NEW SAMPLE"
+    document.body.append(btnDivSample)
+    btnDivSample.addEventListener('click',test2)
+
+    function test2(){
+        count++;
+        console.log("Sample Btn is pressed",count)
+        let div1=document.createElement('p')
+        div1.innerText="Sample Btn is pressed "+""+count
+        div1.style.display="block"
+        div1.setAttribute("class","divDesign")
+        div1.style.backgroundColor="green"
+        document.body.append(div1) 
+    }
+    // test2()
+    // btnDivSample.addEventListener(test2)
+
+
+    // Create a div Tag in JS 
+    // attch a click
+    // write a seperate function
+    // display a text with a indigo color
+
+
+    </script>
+</body>
+</html>
