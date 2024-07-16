@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- click >11Events -->
+    <!-- dblclick >> double click -->
+     <button ondblclick="increment()">Try ME-DBLCLICK</button>
+     <!-- Taking help -->
+      <button id="btn20"> HELP JS </button>
+    <script>
+        let inc=0;
+        function increment(){
+            inc=inc+2;
+            console.log("increment",inc)
+        }
+
+        // using js
+        // 1st way
+        let btn1=document.createElement("button")
+        btn1.innerText="TRY ME- NEW!"
+        document.body.append(btn1)
+        btn1.addEventListener('dblclick',()=>{
+            inc=inc+2;
+            console.log("increment",inc)
+        })
+        // 2nd way >> Seeking help from HTML
+        // create in html > get that btn in js file > document.getElementById('')
+        let btn20=document.getElementById('btn20')
+        // btn20.addEventListener('dblclick',()=>{
+        //     inc=inc+5;
+        //     console.log("Increment Help JS",inc)
+        // })
+
+        btn20.addEventListener('dblclick',increFunc)
+        const increFunc=()=>{
+            inc=inc+5;
+            console.log("Increment Help JS",inc)
+        }
+
+        // click, dblclick, mouseup, mousedown.
+    </script>
+</body>
+</html>
