@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div id="liveAlertPlaceholder"></div>
+    <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+
+    <!-- New Btn -->
+    <button class="btn btn-dark" onclick="popUpalertBox()">Window Object</button>
+    <script>
+        const popUpalertBox=()=>{
+            alert("New ALert Box Pop Up")
+        }
+
+        // Bootstrap Functionalities for alert CUSTOM ALERT
+        var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+        var alertTrigger = document.getElementById('liveAlertBtn')
+
+        function alert(message, type) {
+        var wrapper = document.createElement('div')
+        wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+
+        alertPlaceholder.append(wrapper)
+        }
+        if (alertTrigger) {
+        alertTrigger.addEventListener('click', function () {
+            alert('Nice, you triggered this alert message!', 'primary')
+        })
+        }
+        console.log(window)
+        //alert
+        //confirm
+        //prompt
+        //settimeout  > cleartimeout
+        //setinterval   > clearinterval
+        window.console.log("1")
+        // window.alert("Hey Hello")
+        // alert("hello welcome")
+        // let a=20
+        // if(a==10){
+        //     alert(a)
+        // }else{
+        //     alert("No number")
+        // }
+
+         // alert box  >> ok
+        // confirm box >>  ok or cancel
+        // let output=confirm("are you sure?")
+        // console.log(output)
+        // ok true value
+        // cancel false value
+        let output=true
+        if(output==true){
+            console.log("Offer Acceppted")
+        }else{
+            console.log("Offer Rejected")
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

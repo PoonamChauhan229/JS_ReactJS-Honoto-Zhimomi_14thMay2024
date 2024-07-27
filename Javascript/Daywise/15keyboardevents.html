@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="spanDisplay"></span>
+    <p></p>
+    <script>
+     
+        // document.body.addEventListener('keypress',(event)=>{
+        //     console.log(event)
+        // })
+
+        // document.body.addEventListener('keyup',(event)=>{
+        //     console.log(event)
+        // })
+
+        // document.body.addEventListener('keydown',(event)=>{
+        //     console.log(event)
+        // })
+
+        // show in console | Get in the browser
+        // Press space and Enter
+        // space > Thank You      
+        // Enter > Continue..
+        // Else  > Wrong KeyPress !!!
+        let spanTag=document.createElement('span')
+        document.body.addEventListener('keyup',(event)=>{
+            // console.log(event)
+            console.log(event.code)
+            if(event.code=="Enter"){
+                console.log("Continue...")
+                spanTag.innerHTML="Continue..."
+                document.body.append(spanTag)
+            }else if(event.code=="Space"){
+                console.log("Thank You..")
+                spanTag.innerHTML="Thank You.."
+                document.body.append(spanTag)
+            }else {
+                console.log("Wrong KeyPress !!!")
+                 spanTag.innerHTML="Wrong KeyPress !!!"
+                 document.body.append(spanTag)
+            }
+        })
+        //  reacrate ? in html
+        //  span tag create in html
+        let spanDisplay=document.getElementById('spanDisplay')
+        document.body.addEventListener('keyup',(event)=>{
+            // console.log(event)
+            console.log(event.code)
+            if(event.code=="Enter"){
+                console.log("Continue...")
+                spanDisplay.innerHTML="Continue..."              
+            }else if(event.code=="Space"){
+                console.log("Thank You..")
+                spanDisplay.innerHTML="Thank You.."             
+            }else {
+                console.log("Wrong KeyPress !!!")
+                spanDisplay.innerHTML="Wrong KeyPress !!!"
+            }
+        })
+
+    </script>
+</body>
+</html>
