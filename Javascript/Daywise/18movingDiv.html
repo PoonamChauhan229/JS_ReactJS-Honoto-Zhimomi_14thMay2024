@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #divBox{
+        border:1px solid red;
+        height: 100px;
+        /* width: 80%; */
+        margin-bottom: 10px;
+        background-color: green;
+        margin-right: 100px;
+    }
+    body{
+        border:1px solid red;
+    }
+</style>
+// to move a div + setTimeout
+<body>
+    <div id="divBox"></div>
+    <button id="btn">Click Me</button>
+    <button id="btn1">Click Now</button>
+    <script>
+        let divBox=document.getElementById('divBox')
+        let btn=document.getElementById('btn')
+        let a=10
+        let b=100
+        btn.addEventListener('click',()=>{
+           a=a+100;
+            console.log(a)
+            divBox.style.backgroundColor="red"
+            // divBox.style.width="100px",
+            // divBox.style.height="200px"
+            divBox.style.marginLeft=a+"px"
+        })
+        btn1.addEventListener('click',()=>{
+           b=b+100;
+            console.log(a)
+            divBox.style.backgroundColor="red"
+            divBox.style.marginRight=b+"px"
+           
+        })
+    </script>
+</body>
+</html>
