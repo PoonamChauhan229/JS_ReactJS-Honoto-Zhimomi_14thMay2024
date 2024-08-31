@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        callback >> function inside an function only to the inbuilt methods
+                 >> the inner function is dependant on the outer function
+                 >> When outer function is called, automatically inner function will be called
+     -->
+    <script>
+        // setTimeout(()=>{})//callback
+        // arr.map(()=>{})// callback
+        // arr.filter(()=>{})//callback
+
+        function test(){
+            function test2(){
+                console.log(2)
+            }
+        }
+        test()
+        setTimeout(function test3(){
+            console.log("3")
+        })
+        function test3(){
+            console.log("3")
+        }
+
+        // All the things are not provide by the inbuilt methods
+        // laern to create an callback
+
+        // 2 functions
+        // inner function dependant on outer function
+
+        setTimeout(test3)
+
+        function callMe(x){
+            console.log("I am a callback, inner function",x)
+        }
+
+        function greet(name,callback){//parameter
+            // outer function
+            callback(name)//callMe >> args
+        }
+        greet("Honoto",callMe)//args callMe //
+        // Honoto > name
+        // callMe > callback(name)
+
+
+        function sum(a,b,callback){
+            result=a+b
+            callback(result)
+        }
+        
+        function sumCallback(res){
+            console.log("Result is",res)
+        }
+
+        sum(4,6,sumCallback)
+
+        //upgraded >> the exiting function
+
+        sum(4,6,(res)=>{
+            console.log("Result is",res)
+
+        })
+
+
+
+
+        // callback hell
+        function f1(name){
+            function f2(email){
+                function f3(phone){
+                    function f4(age){
+
+                    }
+                    f4()
+                }
+            }
+            f3()
+            f2()
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
