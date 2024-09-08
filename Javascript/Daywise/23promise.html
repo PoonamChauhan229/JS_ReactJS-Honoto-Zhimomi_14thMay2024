@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Promise 
+        > pending   > initial
+        > fulfilled > resolved  >> value
+        > rejected  > rejected  >> handling errors
+        
+        Promise is an object
+
+        {key:value}// we create the object
+
+        new keyword >> create an instance
+    -->
+        <script>
+            // Syntax
+            const p=new Promise(()=>{})
+            console.log(p)
+
+            const p1=new Promise((resolve,reject)=>{//2 parameter
+              resolve("Promise is Fulfiled")
+            })
+            console.log(p1)
+
+            const p2=new Promise((resolve,reject)=>{
+                reject("Promise Not Fullfiled")//error message
+            })
+            console.log(p2)
+
+            const p3=new Promise((resolve,reject)=>{
+                resolve("1 Okay M good to Go....")
+                reject("1 No i wont to go")// ignored
+            })
+            console.log(p3)
+
+            const p4=new Promise((resolve,reject)=>{
+                reject("2 No i wont to go")
+                resolve("2 Okay M good to Go....")//ignored            
+            })
+            console.log(p4)
+
+
+            // how can we handle both            
+            const p5=new Promise((resolve,reject)=>{
+                if(true){//condition >> true || false
+                    resolve("Promise Executed")
+                }else{
+                    reject("Promise Failed")
+                }
+            })
+            console.log(p5)
+
+            const p6=new Promise((resolve,reject)=>{
+                if(false){
+                    resolve("Promise Executed")
+                }else{
+                    reject("Promise Failed")
+                }
+            })
+            console.log(p6)
+       
+            //take example for true and false
+
+            // ex: age >> voting
+            // 18 < not eligible to vote
+            // 18 > eligible to vote
+
+            let age=30
+            if(age>18){//false
+                // true
+                console.log("I can Vote")
+            }else{//false
+                console.log("I cant vote")
+            }
+
+            // Promise
+
+            let p7=new Promise((resolve,reject)=>{
+                if(age>18){//false
+                    resolve("I can vote")
+                }else{
+                    reject("I cant vote")//error
+                }
+            })
+            console.log(p7)
+            // We didnt value|Error >> we got an Promise Object with the current State
+
+        //Pending   
+        //resolved  >> value  >> i need the value           >> .then()
+        //rejected  >> error  >> i need to handle the error >> .catch()
+        //Playing .... where you throw some number
+        let num=30   
+        let p8=new Promise((resolve,reject)=>{
+                if(num<18){//true //less than
+                    resolve("I am going to Dubai")
+                }else{
+                    reject("I am not going to Dubai")//error
+                }
+            })
+       // console.log(p8)// printing promise object
+        p8.then((res)=>console.log(res)).catch((error)=>console.log(error))
+            
+            
+       </script>
+</body>
+</html>

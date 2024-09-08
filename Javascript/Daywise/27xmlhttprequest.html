@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+     XMLHttpRequest() >> Traditional One ... Nowadays we dont use it
+     fetch()
+
+     HTTP METHODS:
+     Sever Side:
+     POST        >> ADDING DATA TO DB THROUGH SERVER
+     GET         >> RETRIVE DATA from the DATABASE (SERVER)
+     PUT/PATCH   >> UPDATE DATA TO DB VIA SERVER 
+     DELETE      >> DELETE THE DATA
+
+     CLIENT SIDE:
+     GET   >> RETRIVE THE DATA (MOSTLY :50%)
+     other methods are (50%)
+
+     REQUEST RESPONSE CYCLE
+
+     using this methods u will work upon the api
+
+         -->
+    <script>
+       // step1 :create a xhr object
+        let request=new XMLHttpRequest()// an object
+        
+        //RETRIVE THE DATA >> GET METHOD
+        //https://restcountries.com/v3.1/all
+        
+        //step2 : OPen a connection
+        request.open('GET',"https://restcountries.com/v3.1/all")
+
+        // step3 : Sending it up the connection
+        request.send();
+        console.log(request)// OBJ
+        // console.log(request.response)
+        //response from server
+        request.onload=function(){
+            // server only understand string lang
+            // whenever server response >> string form
+            // whenever server accepts  >>string form
+            // JSON.parse() >> convert string to obj
+            // JSON.stringify() convsrt obj to string
+            console.log(request.response) // from response from server
+            let data=JSON.parse(request.response)
+           // console.log(data)
+
+            for(let i=0;i<data.length;i++){
+               // console.log(data[i])
+                // console.log(data[i].area)
+                // console.log(data[i].name.common)
+                let ptag=document.createElement('p')
+                ptag.style.backgroundColor="lightgreen"
+                ptag.innerHTML=`Country name is ${data[i].name.common} ,area is ${data[i].area} and population is ${data[i].population}`
+                document.body.append(ptag)
+            }
+        }
+
+
+    </script>
+</body>
+</html>
+<!-- XMLHttpRequest was traditional along with JS
+    Advance JS:
+   >> Promise  >> .then()   || .catch()
+   >> XMLHttpRequest >> Also giving some response >> Promise 
+   >> fetch()
+
+
+-->

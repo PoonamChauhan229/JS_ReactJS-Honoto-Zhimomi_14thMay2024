@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // if we want write using function >> Task
+            // Printing the Value
+
+            function writePromise(){
+                // console.log("Promise using functions")
+                let f1 = new Promise((resolve,reject)=>{
+                    if(false){//condition >> true || false
+                        resolve("Function using Promise fulfilled")
+                    }else{
+                        reject("Function using Promise Not fullfilled")
+                    }
+                })
+                
+                //console.log(f1)// promise object
+                f1.then((data)=>console.log(data)).catch((error)=>console.log(error))
+
+            }
+            writePromise()
+
+
+
+            function writePromisenew(){
+                // console.log("Promise using functions")
+                let f1 = new Promise((resolve,reject)=>{
+                    if(true){//condition >> true || false
+                       setTimeout(()=>{
+                        resolve("Function using Promise fulfilled,return statement, setTimeout executed")
+                       },2000)
+                    }else{
+                        reject("Function using Promise Not fullfilled,return statement")
+                    }
+                })
+                
+               return f1
+            }
+            const res=writePromisenew()
+            //console.log(res)// promise object
+            res.then((data)=>console.log(data)).catch((error)=>console.log(error))
+            // OR
+            writePromisenew().then((data)=>console.log(data)).catch((error)=>console.log(error))
+
+
+            // task >> using return statement
+
+    // getting the object  >>>    // values and handle the erroe    
+    
+    // i want tio reuse the function again and again
+    function greet(){
+        console.log("Greet")
+    }
+    greet()// function will be used
+
+    greet()
+    greet()
+    greet()
+    greet()
+    // use the retuened data again and again 
+    function greet2(){
+        return "greetings"
+    }
+
+
+    let data=greet2()// return data will be store 
+    console.log(data)
+    console.log(data)
+    console.log(data)
+    console.log(data)
+    console.log(data)
+
+    </script>
+</body>
+</html>

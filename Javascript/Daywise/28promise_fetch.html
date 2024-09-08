@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let req=fetch("https://restcountries.com/v3.1/all")
+        console.log(req)// promise
+        // 
+        // req.then((res)=>console.log(res.json()))
+        // json()
+        //.then >> convert into json object inside the promise
+        //.then >> get the data from it 
+        // req.then((res)=>res.json()).then(()=>console.log(data))
+        req.then((res)=>res.json()).then((data)=>showResponse(data))
+
+        //.then()>> data was ready to use
+
+        //todo
+
+        // using a function u have to print the response 
+        function showResponse(resdata){
+            console.log("Showing Response:",resdata)// display the data             
+        }
+
+        //todo 
+        //rest
+
+        // rescountries >> latitude  longitude 
+        // open weather map >> wether details
+        // https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+
+        // https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=68efa0885519a6f01d76917c463ada68
+        // using promise, .then().catch()
+        // we have to take the lat and lon from the rest countries and pass it to the open weather map url 
+        
+        
+    </script>
+</body>
+</html>
