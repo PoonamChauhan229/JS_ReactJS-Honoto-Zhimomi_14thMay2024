@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function will take 2 numbers and it will give you 2 numbers back
+        // outside function have to do addition of 2 numbers
+
+        function add(x,y){
+            return [x,y]
+        }
+        console.log(add(4,5))
+
+        let numbers=add(4,5)
+        console.log(numbers)
+        
+        let sum=numbers[0]+numbers[1]
+        console.log(sum)
+
+
+
+        function test(){
+            return 3
+        }
+        let str=test()
+        console.log(str)
+
+        function res(){
+            console.log(str+"0")
+        }
+        res()
+    </script>
+</body>
+</html>

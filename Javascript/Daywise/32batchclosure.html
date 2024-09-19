@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        function inside a function
+        there is outer function
+        there is inner funnction
+
+        return the inner function
+    
+    -->
+    <script>
+        //Closures
+        
+        function newest(){
+            console.log(1)
+            return "5"
+        }
+        let a=newest()//5
+         console.log(a)//
+        //  only for the devlopers to check whether the code m writing is exceuting correctly or not
+        // debugging purpose
+
+
+        function test(){//main function || outer functions
+            let name="Honoto"
+            // console.log(name)
+
+            return function test2(){
+                console.log("Hello "+ name) //Hello Honoto
+            }
+           
+        }
+        let b= test()
+        // console.log(b) // at the end of the day is function
+        b()
+
+    </script>
+</body>
+</html>
