@@ -1,0 +1,48 @@
+CSS >> styling >> color+borders >> UI pleasing + smooth 
+smooth UI >> proper color combination + styling (css properties)
+______________________________________________________
+html >> tags >> apply CSS
+
+html >> builds structure (walls)
+css  >> paint + posters + etc  >> plesaing
+
+>> structure + layout 
+>> css >> make it plesaing +elegant + smooth UI experince.
+______________________________________________________
+
+html >> tags
+heading tags >>
+<h1></h1>  >> opening+ closing tags
+h2
+h3
+h4
+h5
+<h6> </h2>
+
+______________________________________________________
+paragraph
+<p></p>
+
+______________________________________________________
+inline  >> in a same line >>img >>span (content space)    
+block   >> new line >> div >>h1-h6 >>p (entire width)
+
+______________________________________________________
+selectors >> 
+id      >> unique in nature (1 id >> no repetition)
+class   >> repeated (n no of times) -.className
+tag     >> dont use this (execeptionaly usage )  10 divs 1 page >> in a different way not possible
+______________________________________________________
+95% - class (CSS) >> (JS-1%) 
+4% -tag     (CSS) >> (JS-4%) 
+1% -tag     (CSS) >> (JS-95%) 
+______________________________________________________ 
+
+styling >>
+internal >> within the page || it is applicable to that page (style tag) above the body tag below the head tags
+
+inline   >> within the tag  || it is applicable to that tag (style attribute)
+
+external >> external file   || wherever u use it >> it will be applicable (link tag) inside the head tag above the title tag
+
+______________________________________________________
