@@ -46,3 +46,19 @@ inline   >> within the tag  || it is applicable to that tag (style attribute)
 external >> external file   || wherever u use it >> it will be applicable (link tag) inside the head tag above the title tag
 
 ______________________________________________________
+
+css topics 
+display
+overflow
+font 
+gradient
+
+
+flex
+grid
+
+position
+
+
+pseudo classes // not imp :hover
+

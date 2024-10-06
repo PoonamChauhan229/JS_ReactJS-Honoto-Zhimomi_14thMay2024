@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    span{
+        /* inline >> block >> block properties are applicable and inline properties are gone */
+        background-color: yellowgreen;
+        height:100px;
+        /* display: block; inline -disbaled block -enabled */
+        margin: 10px;
+        width: 400px;
+    }
+    p{
+        background-color: purple;
+        height:100px;
+        display: inline;
+    }
+    h3{
+        /* inline element > h & w  buthave block properties*/
+        background-color: chocolate;
+        display: inline-block;
+        height: 106px;
+        width:130px;
+        text-align: center;
+    }
+</style>
+<body>
+    <!-- 
+    display:
+    block
+    none
+    inline
+    inline-block
+    flex
+    grid   
+    
+    inline >> span img input >> only ocuupies content space  >> doesnt affect height width
+    block  >> div p headings >> occupies entire width of the page does affect height width
+
+    display >> inline >> block
+    display >> block  >> inline
+    -->
+
+    <span>Lorem ipsum dolor sit amet.</span>
+    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui.</h3>
+    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui.</h3>
+
+    Create a container with three inline-block items inside it.
+    Center the inline-block items horizontally inside the container using text-align: center on the parent container.
+
+    Create a div with an image and a paragraph inside.
+    Use inline-block to display the image and text next to each other.
+
+    <div>
+        <img src="https://png.pngtree.com/png-clipart/20230927/original/pngtree-man-avatar-image-for-profile-png-image_13001882.png" alt="" height="100" width="100" style="border: 1px solid red;">
+        <span>Hello</span>
+    </div>
+
+
+</body>
+
+
+</html>
