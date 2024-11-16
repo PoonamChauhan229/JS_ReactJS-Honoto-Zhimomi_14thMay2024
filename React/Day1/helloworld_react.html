@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+       
+    </div>
+
+    <div id="root">
+        <div id="parent">
+            <div id="child">
+                <h1>I am an h1 tag</h1>
+                <h2>I am an h2 tag</h2>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--react core -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script> 
+
+    <!-- react-router-dom -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script> 
+
+    <script>
+        // Write Hello World
+        //  element >> tag+content
+        // id and class >> attributes {href="url" id="idname" class="classnem"}  >> {href:url,id:idname,class:classname}
+        // React.createElement("tagname",{attributeName:attributeValue},text)
+        const heading=React.createElement('h1',{id:"title"},"Hello World Using REACT")//3 args >> created Element
+        
+        const root=ReactDOM.createRoot(document.getElementById('root')) // DOM Manipulation
+
+        root.render(heading)
+    
+        
+
+    </script>
+</body>
+</html>
+
+<!-- Browser
+>> HTML CSS JS
+xxxx React xxxx >> DEMO 
+
+-->
