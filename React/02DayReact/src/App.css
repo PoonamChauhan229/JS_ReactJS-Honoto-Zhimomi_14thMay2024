@@ -29,10 +29,52 @@ img{
 p{
     margin:0;
     padding:2px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .profileSection{
     display: flex;
-    gap:5px;
+    gap:10px;
     flex-wrap: wrap;
+    
+}
+.chat{
+    border: 1px solid green;
+    width:250px;
+    height:260px;
+    padding:10px 7px;
+}
+.chatRight{
+    text-align: right;
+    border:1px solid green;
+   margin:10px 0px 10px 40px;
+}
+.chatLeft{
+    border:1px solid green;
+    margin:5px 40px 10px 0px;
+}
+button{
+    float:right;
+    width: 27%;
+    height: 32px;
+   
+}
+.messageBtn{
+    border:1px solid green;
+}
+input{
+    width:68%;
+    height: 25px;
+}
+
+.bgRed{
+    background-color: red;;
+}
+.bgNavy{
+    background-color: navy;
+}
+.bgPurple{
+    background-color: purple;
+}
+.bgOrange{
+    background-color: orange;
 }
