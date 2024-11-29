@@ -4,6 +4,7 @@ import React from 'react'
 import LearningDisplay from './Components/LearningDisplay'
 import ProfileSection from './Components/ProfileSEction'
 import ChatSection from './Components/ChatSection'
+import { HomePage } from './Components/HomePage'
 function App() {
 
   return (
@@ -13,7 +14,8 @@ function App() {
    <React.Fragment>
     {/* <LearningDisplay/> */}
     {/* <ProfileSection/> */}
-    <ChatSection/>
+    {/* <ChatSection/> */}
+    <HomePage/>
     
    </React.Fragment>
   )

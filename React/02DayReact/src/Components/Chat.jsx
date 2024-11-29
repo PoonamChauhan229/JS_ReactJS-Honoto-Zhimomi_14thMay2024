@@ -1,19 +1,22 @@
-const Chat=(props)=>{
-    console.log(props)
+// const Chat=(props)=>{
+const Chat=({message1,message2,message3,message4,message5,message6,message7,classBg})=>{// desctructing over the fly
+   // console.log(props)//object >{}
+    // let {message1,message2,message3,message4,message5,message6,message7,classBg}=props    
+    
     return(
         <>
            {
-            props.message1?
+            message1?
             <>
-             <div className={props.classBg} >
+             <div className={classBg} >
                <div className="chat">
-              {props.message1 &&  <p className="chatLeft">{props.message1}</p>}
-               {props.message2 &&  <p className="chatRight">{props.message2}</p>}
-                {props.message3 && <p  className="chatLeft">{props.message3}</p>}
-               {props.message4 &&  <p className="chatRight">{props.message4}</p>}
-                {props.message5 && <p className="chatLeft">{props.message5}</p>}
-                {props.message6 && <p className="chatRight">{props.message6}</p>}
-               {props.message7 &&  <p className="chatLeft">{props.message7}</p> }
+              {message1 &&  <p className="chatLeft">{message1}</p>}
+               {message2 &&  <p className="chatRight">{message2}</p>}
+                {message3 && <p  className="chatLeft">{message3}</p>}
+               {message4 &&  <p className="chatRight">{message4}</p>}
+                {message5 && <p className="chatLeft">{message5}</p>}
+                {message6 && <p className="chatRight">{message6}</p>}
+               {message7 &&  <p className="chatLeft">{message7}</p> }
                 </div>               
            
             <div className="messageBtn">

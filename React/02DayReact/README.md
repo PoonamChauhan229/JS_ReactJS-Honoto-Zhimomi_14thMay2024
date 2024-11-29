@@ -52,3 +52,16 @@ React >> npx create-react-app
 npx create-react-app my-app
 cd my-app
 npm start
+
+
+React Styling >>
+External CSS  >> normal css
+Internal CSS >>
+Inline CSS >>
+
+INternal >><style></style>
+inline >> style=> attributes
+
+style
+style={{color:"red"}}
+{} >> js
