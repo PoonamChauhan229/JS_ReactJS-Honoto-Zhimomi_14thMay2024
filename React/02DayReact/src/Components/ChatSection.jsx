@@ -14,7 +14,14 @@ const ChatSection=()=>{
             message5: "I might go for shopping",
             message6: "Okay. Would you like to go to a book festival",
             message7: "Sure. I'll meet you there",
-            classImg: "bgImg2"
+            classImg: "bgImg2",
+            styleChat:"styleChat"
+        },
+        {
+            message1: "Hi sir where are you travelling to?",
+            message2: "Hello, I'm travelling to bhopal",
+            classImg: "bgImg2",
+            styleChat:"styleChat"
         },
         {
             message1: "Hello Andrew",
@@ -24,7 +31,15 @@ const ChatSection=()=>{
             message5: "Okay glad to know",
             message6: "Thanks for checking on me",
             message7: "Sure no problem",
-            classImg: "bgImg2"
+            classImg: "bgImg2",
+            styleChat:"styleChat"
+        },
+        {
+            message1: "Hi sir where are you travelling to?",
+            message2: "Hello, I'm travelling to bhopal",           
+            message7: "Enjoy your travel.",
+            classImg: "bgImg2",
+            styleChat:"styleChat"
         },
         {
             message1: "Hello sir, what can i get you?",
@@ -34,7 +49,8 @@ const ChatSection=()=>{
             message5: "Sure, we have variety of macbook version at our store. Which version would you like exactly?",
             message6: "I want macbook air 2024",
             message7: "Okay here you go.",
-            classImg: "bgImg2"
+            classImg: "bgImg2",
+            styleChat:"styleChat"
         },
         {
             message1: "Hello Jim, the weather seems like its about to rain",
@@ -44,7 +60,8 @@ const ChatSection=()=>{
             message5: "Did you bring the umbrella?",
             message6: "Oh no, I left it at home",
             message7: "Okay no worries. Let's get back soon",
-            classImg: "bgImg2"
+            classImg: "bgImg2",
+            styleChat:"styleChat"
         },
         {
             message1: "Hi sir where are you travelling to?",
@@ -54,7 +71,8 @@ const ChatSection=()=>{
             message5: "Okay. Here's your ticket",
             message6: "Thank you",
             message7: "Enjoy your travel.",
-            classImg: "bgImg2"
+            classImg: "bgImg2",
+            styleChat:"styleChat"
         },
         {
             message1: "Hello Jim, the weather seems like its about to rain",
@@ -64,7 +82,8 @@ const ChatSection=()=>{
             message5: "Did you bring the umbrella?",
             message6: "Oh no, I left it at home",
             message7: "Okay no worries. Let's get back soon",
-            classImg: "bgImg2"
+            classImg: "bgImg2",
+            styleChat:"styleChat"
         },
         {
             message1: "Hello Jim, the weather seems like its about to rain",
@@ -74,12 +93,14 @@ const ChatSection=()=>{
             message5: "Did you bring the umbrella?",
             message6: "Oh no, I left it at home",
             message7: "Okay no worries. Let's get back soon",
-            classImg: "bgImg2"
+            classImg: "bgImg2",
+            styleChat:"styleChat"
         },
     ]
+    
     return(
         <>
-        <div className="profileSection">
+        {/* <div className="profileSection">
             <Chat
             message1={"Hi , How are You!!"}
             message2={"I am Fine What Abt you?"}
@@ -107,25 +128,33 @@ const ChatSection=()=>{
             message1={"Need to Study!!!"}
             classBg={"bgOrange"}
             />
-        </div>
-
+        </div> */}
+    {/* Any chat box which we have less than = 3 .... color:yellow bgColor:blue */}
+    
         <div className="profileSection">
             {/* array.map() */}
             {
-                messagaeArray.map((element)=><Chat
-                                                message1= {element.message1}
-                                                message2= {element.message2}
-                                                message3= {element.message3}
-                                                message4= {element.message4}
-                                                message5= {element.message5}
-                                                message6={element.message6}
-                                                message7= {element.message7}
-                                                classImg={element.classImg}            
-                
-                />)
+                messagaeArray.map((element)=>(
+                    // console.log("messagaeArray",element)
+                    // console.log("messagaeArray",Object.keys(element).length)
+
+                         <Chat     message1= {element.message1}
+                                    message2= {element.message2}
+                                    message3= {element.message3}
+                                    message4= {element.message4}
+                                    message5= {element.message5}
+                                    message6={element.message6}
+                                    message7= {element.message7}
+                                    classImg={element.classImg}   
+                                    styleChat={element.styleChat}  
+                                    element={element}
+                    />
+            ))
             }
         </div>
         </>
     )
 }
 export default ChatSection
+// style attribute >> objects >> 
+// useState() >> Hooks

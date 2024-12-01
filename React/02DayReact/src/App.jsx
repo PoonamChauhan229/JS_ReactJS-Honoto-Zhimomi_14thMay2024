@@ -14,8 +14,8 @@ function App() {
    <React.Fragment>
     {/* <LearningDisplay/> */}
     {/* <ProfileSection/> */}
-    {/* <ChatSection/> */}
-    <HomePage/>
+    <ChatSection/>
+    {/* <HomePage/> */}
     
    </React.Fragment>
   )

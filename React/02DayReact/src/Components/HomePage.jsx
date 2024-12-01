@@ -1,15 +1,20 @@
 export const HomePage=()=>{
 
     const objLi=[
-            {"liList":7},
-            {"liList":2},
-            {"liList":1},
-            {"liList":3},
-            {"liList":10},
-            {"liList":5},
+            {liList:7},
+            {liList:12},
+            {liList:5},
+            {liList:17},            
+            {liList:10},
+            {liList:11},
+            {liList:51},
+            {liList:2},
+            {liList:1},
+            {liList:3},
+            {liList:31}
         ]
 
-        // liList >4 >> green color  <4 >> pink color 
+       
     const paraStyle={
         fontSize:"30px",
         color:"navy",
@@ -22,15 +27,23 @@ export const HomePage=()=>{
         margin:"10px",
         border:"10px ridge green"
     }
-    const listStyle={
-        color:"red"
+
+    {console.log(objLi[0].liList)}
+     // liList >10 >> green color || pink color 
+    const listStyleGreen={
+        color:"green"
+    }
+    const listStylePink={
+        color:"pink"
     }
 
     return(
         <>
         <ul>
            {
-            objLi.map((element)=><li style={listStyle}>{element.liList}</li>)
+            objLi.map((element)=>            
+            <li style={ element.liList >=10 ?listStyleGreen:listStylePink}>            
+            {element.liList}</li>)
            }
         </ul>
         <h1 style={{color:"blue"}}>HomePage</h1> 

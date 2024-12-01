@@ -78,3 +78,10 @@ input{
 .bgOrange{
     background-color: orange;
 }
+.bgImg2{
+    background-color: orangered;
+}
+.styleChat{
+    color:plum;
+    background-color: blue;
+}
