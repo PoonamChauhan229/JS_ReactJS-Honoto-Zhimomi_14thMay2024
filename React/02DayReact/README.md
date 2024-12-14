@@ -65,3 +65,35 @@ inline >> style=> attributes
 style
 style={{color:"red"}}
 {} >> js
+
+<!-- React >> 2013 -->
+//Class Components >>
+//Functional Components >>
+// Hooks >> Functions
+useState()
+
+// IN JS >> count >> 0  >> 5 
+//let count=0;
+for(let i=count;i<=5;i++){
+   // console.log(i)
+    count=i
+}
+console.log("Count:",count)
+
+//React >> Hooks >> useState()
+
+//intial values >> intitialState
+//let varaible=
+//""
+//[]
+//{}
+//null
+//0
+//100
+//"ertyu"
+
+const [state,setState]=useState(Initialvalue)
+const [count,setCount]=useState(100) 
+//count=100;
+//setCount >> Function >> help the to update state
+//setCount(400) >> count=400
