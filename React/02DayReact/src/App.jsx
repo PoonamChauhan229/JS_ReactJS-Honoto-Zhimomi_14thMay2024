@@ -6,6 +6,7 @@ import ProfileSection from './Components/ProfileSEction'
 import ChatSection from './Components/ChatSection'
 import { HomePage } from './Components/HomePage'
 import Calculate from './Components/Calculate'
+import Counter from './Components/Counter'
 function App() {
  
 
@@ -18,7 +19,8 @@ function App() {
     {/* <ProfileSection/> */}
     {/* <ChatSection/> */}
     {/* <HomePage/> */}
-    <Calculate/>
+    {/* <Calculate/> */}
+    <Counter/>
     
    </React.Fragment>
   )

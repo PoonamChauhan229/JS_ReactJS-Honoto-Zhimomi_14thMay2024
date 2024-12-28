@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(1, 1, 54);
+    color:white;
+    padding: 5px;
+}
+.navItems{
+    display: flex;
+    gap:20px;
+    /* background-color: aqua;   */
+}
+.items{
+    /* padding:5px; */
+}
+.imgHeader{
+    background-image: url('https://t3.ftcdn.net/jpg/10/25/57/76/360_F_1025577629_EPnzUsnnBYENn35cOWUomyTjqRzFbNKh.jpg');
+    /* height:100px; */
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-size: 100% 700px;
+
+}

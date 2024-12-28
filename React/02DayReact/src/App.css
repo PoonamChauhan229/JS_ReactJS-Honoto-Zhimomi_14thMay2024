@@ -52,12 +52,12 @@ p{
     border:1px solid green;
     margin:5px 40px 10px 0px;
 }
-button{
+/* button{
     float:right;
     width: 27%;
     height: 32px;
    
-}
+} */
 .messageBtn{
     border:1px solid green;
 }
