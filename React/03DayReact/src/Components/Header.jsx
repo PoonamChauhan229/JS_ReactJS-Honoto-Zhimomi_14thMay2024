@@ -1,17 +1,20 @@
 const Header=()=>{
 
     const imgStyle={
-        width:"100%",
-        height:"200px",
-        color:"yellow",
+        width:"50%",
         textAlign:"center",
-        paddingTop:"150px"
+        height:"370px",
+        color:"#ffa700",
+        paddingTop:"150px",
+        fontSize:"70px",
+        margin:"0 25%"
+
     }
     return(
         <>      
 
         <div className="imgHeader">
-            <h1 style={imgStyle}>MY MOVIES PAGE</h1>
+            <h1 style={imgStyle}>Unlimited movies, TV shows and more</h1>
         </div>
         </>
     )

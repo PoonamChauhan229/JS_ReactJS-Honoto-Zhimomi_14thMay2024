@@ -1,9 +1,9 @@
 import MovieCard from "./MovieCard"
 
-const AllMovieCard=({movie})=>{
+const MovieDisplay=({movie})=>{
     console.log(movie)
     return(
-        <>
+        <div className="movieContainer">
             {/* <MovieCard/>
             <MovieCard/>
             <MovieCard/>
@@ -17,7 +17,7 @@ const AllMovieCard=({movie})=>{
                 summary={element.summary}
                 />)
             }
-        </>
+        </div>
     )
 }
-export default AllMovieCard
+export default MovieDisplay

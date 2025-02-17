@@ -1,7 +1,12 @@
 import './App.css'
-import AllMovieCard from './Components/AllMovieCard'
+import MovieDisplay from './Components/MovieDisplay'
 import Header from './Components/Header'
 import NavBar from './Components/NavBar'
+import About from './Components/Pages/About'
+import Services from './Components/Pages/Services'
+import {Routes, Route } from "react-router";
+import Home from './Components/Pages/Home'
+import AddMovie from './Components/Pages/AddMovie'
 
 function App() { 
  const movie=[
@@ -81,9 +86,25 @@ function App() {
  
   return (
     <>
+   
     <NavBar/>
-    <Header/>
-    <AllMovieCard movie={movie}/>
+    
+    {/* <Services/>
+     <Header/>
+    <MovieDisplay movie={movie}/> */}
+
+    <Routes>
+      {/* 2 props  > arguments  args*/}
+      {/* we are passing a component home component
+        to a route component as a props
+
+        And to the Home component we are array of objects i.e movie as a props 
+      */}
+      <Route path='/' element={<Home movie={movie}/>}/> 
+      <Route path='/about' element={<About/>}/>
+      <Route path='/services' element={<Services movie={movie} title="MovieTitles"/>}/> 
+      <Route path='/addmovie' element={<AddMovie/>}/> 
+    </Routes>
     </>
   )
 }

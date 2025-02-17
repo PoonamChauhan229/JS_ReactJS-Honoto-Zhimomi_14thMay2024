@@ -7,7 +7,9 @@
     justify-content: space-between;
     background-color: rgb(1, 1, 54);
     color:white;
-    padding: 5px;
+    padding: 10px;
+    font-size: 18px;
+    /* border: 5px solid red; */
 }
 .navItems{
     display: flex;
@@ -17,12 +19,54 @@
 .items{
     /* padding:5px; */
 }
+
+.icon{
+    font-size: 25px;
+    /* border: 1px solid red; */
+    vertical-align:bottom;
+    margin-right: 1px;
+}
+
 .imgHeader{
-    background-image: url('https://t3.ftcdn.net/jpg/10/25/57/76/360_F_1025577629_EPnzUsnnBYENn35cOWUomyTjqRzFbNKh.jpg');
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/015/286/178/small/abstract-backgrounds-hexagon-horizon-blue-80-s-90-s-retro-virtual-world-game-virtual-reality-in-cinema-or-future-vector.jpg');
     /* height:100px; */
     /* background-position: center; */
     background-repeat: no-repeat;
     /* background-size: cover; */
-    background-size: 100% 700px;
+    background-size: 100% 500px;
 
+}
+body{
+    background-color: black;
+    color: rgba(255, 255, 255, 0.836);
+}
+/* Movie card and movie container */
+.movieContainer{
+    display: flex;
+    column-gap: 10px;
+    row-gap:8px;
+    flex-wrap: wrap;
+    width:90%;
+    margin:0% 5%;
+}
+.movieCard{
+    width: 300px;
+    /* height: 320px; */
+    box-shadow: 10px 5px 5px rgb(28, 28, 28);
+    /* border: 1px solid red; */
+    
+}
+.imgPoster{
+    width: 300px;
+    height: 200px;
+    
+}
+.movieSpecs{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.movieSummary{
+    padding: 10px;
+    
 }

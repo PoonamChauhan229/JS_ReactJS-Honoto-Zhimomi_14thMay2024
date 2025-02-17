@@ -111,3 +111,53 @@ const [count,setcount]=useState()       // useState is a react hook
 console.log(count,setcount());
 
 setCount()
+
+
+<!-- Git
+Cloud >> Store our code + We can deploy >>Live URL >>Free Hosting
+Free Hosting >>HTML CSS JS projects >>Source Code+ Deploy 
+Git >> Github Deskstop , Git Web ,Git App (Desktop +Mobile)  >>Supports Various IDE >>Version Control
+
+Git >> https://github.com/
+>>Create >>Repo 
+>>Organize >> Repo(Folders)
+>>Profile Creation >> Github
+>>Repositories >> Folders 
+>>Direct Upload
+>>SCM >> LOCAL >>APP
+
+
+git init >>Intilaization 
+git add .   >>(. >>all ur files will be uploaded)
+git commit -m "first commit"   >>"message"
+git branch -M main             >>Going to the branch
+git remote add origin https://github.com/PoonamChauhan229/test_03_02.git  >> add ||
+git push -u origin main
+
+git add . 
+git commit -m "xyz message"
+git push
+
+>>git clone (existing project >> we do a change)
+git clone https://github.com/PoonamChauhan229/test03_03.git
+git add . 
+git commit -m "xyz message"
+git push
+
+1 project >> repo
+practice || revise >>1 repo
+
+VS Code >> 4-5 clicks
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
