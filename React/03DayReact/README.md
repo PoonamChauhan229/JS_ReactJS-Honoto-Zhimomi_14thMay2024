@@ -161,3 +161,49 @@ VS Code >> 4-5 clicks
 
 
  -->
+
+ Varible >> JS Doesnt react(update) the values as per changes in the broswer --NO
+useState()  >> Destructing concpet
+const [state,setState]=useState(20) >> Hooks Functions
+let a="Honoto", 20,JS
+
+
+string
+null
+[]
+{}
+
+// empty >> put the valuse >> initial render 
+state >> React variable 
+state=20 || let state=20 >> JS
+setState() >> Function >> help us to update initial State Value
+
+input ::::>>>
+mobvie name   >>const[mn,setmn]=useState("")
+movieposter
+moviesummary
+
+useState() 
+//JSX  >> html like syntax in js  >> function >>return(<>......  {}</>)
+<input  value={mn} onchange=(e)=>{mn(e.target.value)}/> // readonly 
+// eventhandler >> onChange >>event >> object >> e.target.value 
+
+4 input >> setState(e.target.value)
+
+Button >>
+Submit >> Get in the console
+click >> onclick >>()=>{
+  console.log(mn,mp,ms,mr)
+  object
+  {
+    moviename:mn,
+    movirposter:mp,
+    movierating:mr
+  }
+  array
+  [mn,mp,ms,mr]
+
+}
+
+Submit >> Add a new movie >> exiting DB >> movie [{},{},{},mn,mp,ms,mr]
+

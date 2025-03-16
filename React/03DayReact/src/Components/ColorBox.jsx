@@ -6,6 +6,8 @@ import { useState } from "react"
 const ColorBox=()=>{
     const [colorVal,setColorVal]=useState("yellow")
 
+     // For storing multiple value in an array
+    // [yellow,red,green]
     const [colorList,setColorList]=useState([])
 
     const colorDiv={
@@ -18,10 +20,15 @@ const ColorBox=()=>{
     return(
         <>
         <h1>ColorBox</h1>
-        <input type="text" value={colorVal} onChange={(e)=>{setColorVal(e.target.value)}}/>
+        <input type="text"
+        value={colorVal} 
+        onChange={(e)=>{setColorVal(e.target.value)}}
+        />
+        
         <button
         onClick={()=>{
             console.log(colorVal)
+            // Spread Operator >> copy colorVal and update colorList
             setColorList([...colorList,colorVal])
             console.log(colorList)
         }}
@@ -31,7 +38,7 @@ const ColorBox=()=>{
         
         {
             colorList.map((element,index)=><div 
-            key={index}
+            key={index} // virtual DOM  >> unique key
             style={{
                  backgroundColor:element,
                     height:"20px",
@@ -39,11 +46,7 @@ const ColorBox=()=>{
                     marginTop:"10px"
             }}></div>)
         }
-
-
-
-
-        </>
+    </>
     )
 }
 export default ColorBox

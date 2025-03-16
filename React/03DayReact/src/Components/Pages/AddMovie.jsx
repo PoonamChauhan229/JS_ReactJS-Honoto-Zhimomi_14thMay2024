@@ -1,11 +1,13 @@
 import { useState } from "react";
 
-const AddMovie = () => {
+const AddMovie = (allmovies) => {
+  // console.log(allmovies)
+  // console.log(allmovies.allmovies)
   const [movieName, setMovieName] = useState("RRR");
   const [moviePoster, setmoviePoster] = useState("");
   const [movieRating, setmovieRating] = useState("");
   const [movieSummary, setmovieSummary] = useState("");
-  const [movieList, setMovieList] = useState([]);
+  const [movieList, setMovieList] = useState(allmovies.allmovies); // check that spread works
 
 
 //   12 movie list  exiting movielist >> App.jsx
@@ -49,13 +51,7 @@ const AddMovie = () => {
       <br />
 
       <button
-        onClick={() => {
-          console.log({
-                          movieposter:moviePoster,
-                          moviename:movieName,
-                          rating:movieRating,
-                          summary:movieSummary
-                      })
+        onClick={() => {         
 
           let newMovie = {
             movieposter: moviePoster,
@@ -64,13 +60,19 @@ const AddMovie = () => {
             summary: movieSummary,
           };
 
-          setMovieList([...movieList, newMovie]);
-          console.log(movieList);
+          
+          console.log(newMovie);
+          setMovieList([...movieList,newMovie]) 
+          console.log(movieList)
         }}
+      
       >
         Submit
       </button>
+      {/* {console.log(movieList)} */}
     </>
+    
   );
+
 };
 export default AddMovie;
