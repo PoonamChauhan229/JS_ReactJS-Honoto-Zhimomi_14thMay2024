@@ -2,15 +2,24 @@ import { useEffect, useState } from 'react'
 
 // https://jsonplaceholder.typicode.com/posts
 //fetch
+
+// useEffect(cbk function)
+// useEffect(()=>{}) initial render >> call n times >> burden
+// useEffect(cbk function,dependancy array)
+// useEffect(()=>{},[]) >>initial render >> multiple times no >> 1 call 
 const APIcall = () => {
     const [todos,setTodos]=useState([])
+    const [count,setCount]=useState(0) //1
     useEffect(()=>{
         getTodos();
         updateTodos();
         deleteTodos();
-    },[])
+    },[count])  // empty dependancy array
     //depenedancy >> empty array >> initial render >> run once >>page load
+    // putting value in dependancy >> initial render + whenever value changes that time it will render
 
+    //evrey time >> empty 
+    // state variable 
 // api call >> READ METHOD GET
 const getTodos=async()=>{
     console.log("GET ALL TODOS")
@@ -20,6 +29,7 @@ const getTodos=async()=>{
     setTodos(data)
 }
 // console.log(todos)
+// getTodos()
  
 
 const updateTodos=async()=>{

@@ -1,7 +1,10 @@
 import { useState } from "react"
 import { useEffect } from "react"
+import {useNavigate} from "react-router-dom"
 
 function Read() {  
+    const navigate=useNavigate()
+
     // https://67d541d4d2c7857431efd3a5.mockapi.io/movies
     const [showMovies,setshowMovies]=useState([])
     useEffect(()=>{
@@ -13,6 +16,19 @@ function Read() {
         const data=await res.json()
         console.log(data)
         setshowMovies(data)
+    }
+    const handleDelete=async(id)=>{
+        const res=await fetch(`https://67d541d4d2c7857431efd3a5.mockapi.io/movies/${id}`,{
+            method:"DELETE"
+        })
+        const data=await res.json()
+        console.log(data)
+        getMovies()
+    }
+    const handleEdit=async(id)=>{
+        // api call
+        // fetching data >> GET METHOD      
+        navigate(`/edit/${id}`)
     }
   return (
     <>
@@ -33,6 +49,7 @@ function Read() {
         </thead>
         <tbody>
             {
+                // array of movieobject >>
                 showMovies.length>0?
                     showMovies.map((element,index)=>(
                         <tr key={element.id}>
@@ -45,8 +62,12 @@ function Read() {
                             <td>{element.rating}</td>
                             <td style={{width:"500px"}}>{element.summary.substring(0,100)}...</td>
                             <td>
-                                <button type="button" className="btn btn-warning me-3">Edit</button>
-                                <button type="button" className="btn btn-danger">Delete</button>
+                                <button type="button" className="btn btn-warning me-3"
+                                onClick={()=>handleEdit(element.id)}
+                                >Edit</button>
+                                <button type="button" className="btn btn-danger"
+                                onClick={()=>handleDelete(element.id)}
+                                >Delete</button>
                             </td>        
                         </tr>
                     ))

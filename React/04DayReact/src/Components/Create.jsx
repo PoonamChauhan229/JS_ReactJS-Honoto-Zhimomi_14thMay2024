@@ -6,8 +6,7 @@ function Create() {
   const [movieRating,setmovieRating]=useState("")
   const [movieSummary,setmovieSummary]=useState("")
   
-  const handleSubmitForm=(e)=>{
-    e.preventDefault()
+  const handleSubmitForm=()=>{
     console.log("Form Submitted")
     console.log(movieName,moviePoster,movieRating,movieSummary)
     const movie={
@@ -41,27 +40,29 @@ function Create() {
         <hr/>
       <h3 className="text-center text-decoration-underline text-primary">Create Movie</h3>
       <hr/>
-        <form className="p-3 container w-50">
-  <div className="row mb-3 ">
-    <label htmlFor="movieName" className="col-sm-2 col-form-label">MovieName :</label>
-    <div className="col-sm-10">
-      <input type="text" className="form-control" id="movieName" 
-      value={movieName}
-      onChange={(e)=>setmovieName(e.target.value)}
-      />
-    </div>
-  </div>
+        <form className="p-3 container w-50">\
+          {/* moviename */}
+        <div className="row mb-3 ">
+          <label htmlFor="movieName" className="col-sm-2 col-form-label">MovieName :</label>
+          <div className="col-sm-10">
+            <input type="text" className="form-control" id="movieName" 
+            value={movieName}
+            onChange={(e)=>setmovieName(e.target.value)}
+            />
+          </div>
+        </div>
 
+{/* poster */}
   <div className="row mb-3 ">
     <label htmlFor="moviePoster" className="col-sm-2 col-form-label">MoviePoster :</label>
     <div className="col-sm-10">
       <input type="text" className="form-control" id="moviePoster"
       value={moviePoster}
-      onChange={(e)=>setmoviePoster(e.target.value)}
-      
+      onChange={(e)=>setmoviePoster(e.target.value)}      
       />
     </div>
   </div>
+  {/* rating */}
   <div className="row mb-3 ">
     <label htmlFor="movieRating" className="col-sm-2 col-form-label">Movierating :</label>
     <div className="col-sm-10">
@@ -71,6 +72,8 @@ function Create() {
       />
     </div>
   </div>
+
+{/* moviesummary */}
   <div className="row mb-3 ">
     <label htmlFor="movieSummary" className="col-sm-2 col-form-label">MovieSummary:</label>
     <div className="col-sm-9">
@@ -81,6 +84,7 @@ function Create() {
     </div>
   </div>
  
+ {/* button */}
   <button type="submit" className="btn btn-primary" onClick={(e)=>handleSubmitForm(e)}>Submit</button>
 </form>
       </>
