@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import EditModal from "./Edit"; // Import the modal
+import Edit from "./Edit";
 
 function Read() {
   const [movies, setMovies] = useState([]);
-  const [showModal, setShowModal] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState(null);
+  const [showModal,setShowModal]=useState(false)
 
   useEffect(() => {
     getMovies();
@@ -24,9 +24,10 @@ function Read() {
   };
 
   const handleEdit = (movie) => {
-    setSelectedMovie(movie);
-    setShowModal(true);
-  };
+    console.log(movie)//element
+    setSelectedMovie(movie)
+    setShowModal(true)
+  }
 
   return (
     <>
@@ -43,27 +44,28 @@ function Read() {
           </tr>
         </thead>
         <tbody>
-          {movies.map((movie) => (
-            <tr key={movie.id}>
-              <td>{movie.id}</td>
-              <td>{movie.moviename}</td>
+          {movies.map((element) => (
+            <tr key={element.id}>
+              <td>{element.id}</td>
+              <td>{element.moviename}</td>
               <td>
-                <img src={movie.movieposter} style={{ width: "100px", height: "80px" }} className="rounded-circle border" alt="" />
+                <img src={element.movieposter} style={{ width: "100px", height: "80px" }} className="rounded-circle border" alt="" />
               </td>
-              <td>{movie.rating}</td>
-              <td style={{ width: "500px" }}>{movie.summary.substring(0, 100)}...</td>
+              <td>{element.rating}</td>
+              <td style={{ width: "500px" }}>{element.summary.substring(0, 100)}...</td>
               <td>
-                <button className="btn btn-warning me-3" onClick={() => handleEdit(movie)}>Edit</button>
-                <button className="btn btn-danger" onClick={() => handleDelete(movie.id)}>Delete</button>
+                
+                <button className="btn btn-warning me-3" onClick={() => handleEdit(element)}>Edit</button>
+
+                <button className="btn btn-danger" onClick={() => handleDelete(element.id)}>Delete</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-
-      {/* Pass required props to EditModal */}
-      <EditModal showModal={showModal} setShowModal={setShowModal} selectedMovie={selectedMovie} getMovies={getMovies} />
-    </>
+      
+      <Edit showModal={showModal} setShowModal={setShowModal} selectedMovie={selectedMovie}/>
+      </>
   );
 }
 

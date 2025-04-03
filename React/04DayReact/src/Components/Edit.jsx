@@ -1,117 +1,150 @@
-import React, { useState, useEffect } from "react";
+// Edit Modal
+// show modal  >>click on that edit btn  >> boolean value >>true
+// fade modal  >>plain screen no visible >> boolean value >>false
 
-function EditModal({ showModal, setShowModal, selectedMovie, getMovies }) {
-  const [movieName, setMovieName] = useState("");
-  const [moviePoster, setMoviePoster] = useState("");
-  const [movieRating, setMovieRating] = useState("");
-  const [movieSummary, setMovieSummary] = useState("");
 
-  useEffect(() => {
-    if (selectedMovie) {
-      setMovieName(selectedMovie.moviename);
-      setMoviePoster(selectedMovie.movieposter);
-      setMovieRating(selectedMovie.rating);
-      setMovieSummary(selectedMovie.summary);
+import { useState,useEffect } from "react";
+function Edit({showModal,setShowModal,selectedMovie}) {  
+    console.log(showModal)// false
+    const [movieName, setMovieName] = useState("");
+      const [moviePoster, setMoviePoster] = useState("");
+      const [movieRating, setMovieRating] = useState("");
+      const [movieSummary, setMovieSummary] = useState("");
+    
+
+    // modal to load
+    // selectedmovie
+    useEffect(() => {
+        console.log("Test",selectedMovie)
+        if(selectedMovie){ // false
+            console.log(selectedMovie)
+            setMovieName(selectedMovie.moviename)
+            setMoviePoster(selectedMovie.movieposter)
+            setMovieRating(selectedMovie.rating)
+            setMovieSummary(selectedMovie.summary)
+
+        }        
+    },[selectedMovie])
+    // [] >> Intial Render >> 1st 
+    // [something inside] >> render >> whenever "something inside" is updated
+
+    const handleClose=()=>{
+        setShowModal(false)
     }
-  }, [selectedMovie]);
+    const handleUpdate=()=>{
+        console.log("Updation to Server in progress...."
+            // 1- We have to make an API Call >> to the server
 
-  const handleUpdate = async () => {
-    if (!selectedMovie) return;
+            // 2- update to the browser
 
-    const updatedMovie = {
-      moviename: movieName,
-      movieposter: moviePoster,
-      rating: movieRating,
-      summary: movieSummary,
-    };
 
-    await fetch(
-      `https://67d541d4d2c7857431efd3a5.mockapi.io/movies/${selectedMovie.id}`,
-      {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updatedMovie),
-      }
-    );
+        )
+    }
 
-    setShowModal(false);
-    getMovies(); // Refresh movie list
-  };
+    if(showModal==false) return null;  
 
-  if (!showModal) return null; // Prevent rendering when modal is not needed
+    
+        return (
+            <>
+               
 
-  return (
-    <div
-      style={{
-        position: "fixed",
-        inset: 0,
-        background: "rgba(0,0,0,0.5)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        zIndex: 1000, // Ensures modal appears above everything
-      }}
-    >
-      <div
-        className="modal-content p-4"
-        style={{
-          background: "#fff",
-          borderRadius: "8px",
-          width: "500px",
-          padding: "20px",
-          boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-        }}
-      >
-        <h3>Edit Movie</h3>
-        <label>Movie Name:</label>
-        <input
-          type="text"
-          className="form-control"
-          value={movieName}
-          onChange={(e) => setMovieName(e.target.value)}
-        />
+                <div 
+                style={{
+                    position:"fixed",
+                    backgroundColor:"rgba(0,0,0,0.5)",
+                    inset:0,
+                    display:"flex",
+                    justifyContent:"center",
+                    alignItems:"center",
+                    zIndex:1000,
+                
+                }} >
+                <div className="modal-dialog" style={{width:"500px"}}>
+                    <div className="modal-content">
+                    <div className="modal-header">
+                        <h1 className="modal-title fs-5" id="staticBackdropLabel">Edit Update Form</h1>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                         onClick={()=>handleClose()}
+                        ></button>
+                    </div>
+                    <div className="modal-body">
+                            {/* Movie Name */}
+                            <div className="row mb-3">
+                            <label htmlFor="movieName" className="col-sm-2 col-form-label">Movie Name:</label>
+                            <div className="col-sm-10">
+                                <input
+                                type="text"
+                                className="form-control"
+                                id="movieName"
+                                value={movieName}
+                                onChange={(e) => setMovieName(e.target.value)}
+                                required
+                                />
+                            </div>
+                            </div>
 
-        <label>Movie Poster:</label>
-        <input
-          type="text"
-          className="form-control"
-          value={moviePoster}
-          onChange={(e) => setMoviePoster(e.target.value)}
-        />
+                            {/* Movie Poster */}
+                            <div className="row mb-3">
+                            <label htmlFor="moviePoster" className="col-sm-2 col-form-label">Movie Poster:</label>
+                            <div className="col-sm-10">
+                                <input
+                                type="text"
+                                className="form-control"
+                                id="moviePoster"
+                                value={moviePoster}
+                                onChange={(e) => setMoviePoster(e.target.value)}
+                                required
+                                />
+                            </div>
+                            </div>
 
-        <label>Movie Rating:</label>
-        <input
-          type="number"
-          className="form-control"
-          value={movieRating}
-          onChange={(e) => setMovieRating(e.target.value)}
-          min="0"
-          max="10"
-          step="0.1"
-        />
+                            {/* Movie Rating */}
+                            <div className="row mb-3">
+                            <label htmlFor="movieRating" className="col-sm-2 col-form-label">Movie Rating:</label>
+                            <div className="col-sm-10">
+                                <input
+                                type="number"
+                                className="form-control"
+                                id="movieRating"
+                                value={movieRating}
+                                onChange={(e) => setMovieRating(e.target.value)}
+                                min="0"
+                                max="10"
+                                step="0.1"
+                                required
+                                />
+                            </div>
+                            </div>
 
-        <label>Movie Summary:</label>
-        <textarea
-          className="form-control"
-          value={movieSummary}
-          onChange={(e) => setMovieSummary(e.target.value)}
-        ></textarea>
+                            {/* Movie Summary */}
+                            <div className="row mb-3">
+                            <label htmlFor="movieSummary" className="col-sm-2 col-form-label">Movie Summary:</label>
+                            <div className="col-sm-10">
+                                <textarea
+                                className="form-control"
+                                id="movieSummary"
+                                rows="3"
+                                value={movieSummary}
+                                onChange={(e) => setMovieSummary(e.target.value)}
+                                required
+                                ></textarea>
+                            </div>
+                            </div>
 
-        <div className="mt-3">
-          <button className="btn btn-success me-2" onClick={handleUpdate}>
-            Update
-          </button>
-          <button className="btn btn-danger" onClick={() => setShowModal(false)}>
-            Cancel
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
+                    </div>
+                    <div className="modal-footer">
+                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal"
+                        onClick={()=>handleClose()}
+                        >Close</button>
+                        <button type="button" className="btn btn-primary" 
+                        onClick={()=>handleUpdate()}
+                        >Update</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </>
+        )
+    }
 
-export default EditModal;
+export default Edit;
