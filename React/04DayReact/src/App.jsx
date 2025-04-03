@@ -12,8 +12,6 @@ function App() {
     <>
       <Create/> 
       <Read/>
-      <Update/>
-      <Delete/> 
       <Routes>
         <Route path='/edit/:id' element={<Edit/>}/>
       </Routes>
