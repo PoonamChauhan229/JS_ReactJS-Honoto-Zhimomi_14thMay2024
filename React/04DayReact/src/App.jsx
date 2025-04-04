@@ -1,18 +1,17 @@
+import { useState } from 'react'
 import './App.css'
 import Create from './Components/Create'
 import Read from './Components/Read'
-import {Routes,Route} from 'react-router-dom'
-// import Edit from './Components/Edit'
+
 
 
 function App() {  
+    const [movies, setMovies] = useState([]);  
+   
   return (
     <>
-      <Create/> 
-      <Read/>
-      <Routes>
-        {/* <Route path='/edit/:id' element={<Edit/>}/> */}
-      </Routes>
+      <Create movies={movies} setMovies={setMovies}/> 
+      <Read  movies={movies} setMovies={setMovies}/>
      
     </>
   )

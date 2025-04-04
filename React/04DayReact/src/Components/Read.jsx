@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import Edit from "./Edit";
 
-function Read() {
-  const [movies, setMovies] = useState([]);
+function Read({movies,setMovies}) {
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [showModal,setShowModal]=useState(false)
 
@@ -64,7 +63,7 @@ function Read() {
         </tbody>
       </table>
       
-      <Edit showModal={showModal} setShowModal={setShowModal} selectedMovie={selectedMovie}/>
+      <Edit showModal={showModal} setShowModal={setShowModal} selectedMovie={selectedMovie} getMovies={getMovies}/>
       </>
   );
 }

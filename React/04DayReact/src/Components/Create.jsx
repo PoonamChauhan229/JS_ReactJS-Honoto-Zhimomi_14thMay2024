@@ -1,10 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-function Create() {
+function Create({movies,setMovies}) {
   const [movieName, setMovieName] = useState("");
   const [moviePoster, setMoviePoster] = useState("");
   const [movieRating, setMovieRating] = useState("");
   const [movieSummary, setMovieSummary] = useState("");
+   
+
+  const getMovies = async () => {
+    const res = await fetch(`https://67d541d4d2c7857431efd3a5.mockapi.io/movies`);
+    const data = await res.json();
+    setMovies(data);
+  };
+
+  useEffect(() => {
+    getMovies();
+  }, []);
 
   const handleSubmitForm = (event) => {
     event.preventDefault(); // Prevents form from reloading the page
@@ -22,6 +33,7 @@ function Create() {
     console.log(movie);
     handlePostMovie(movie);
   };
+ 
 
   const handlePostMovie = async (movie) => {
     console.log("Adding data to the server", movie);
@@ -37,7 +49,12 @@ function Create() {
 
       let data = await res.json();
       console.log("Response from server:", data);
-      alert("Movie added successfully!"); // Confirmation message
+
+      // alert("Movie added successfully!"); // Confirmation message
+    //  Updation in browser >> call the getMovies function
+      getMovies()
+      
+     
 
       // Reset form fields after submission
       setMovieName("");

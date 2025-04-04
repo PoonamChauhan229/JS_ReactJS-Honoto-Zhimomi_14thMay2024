@@ -4,12 +4,12 @@
 
 
 import { useState,useEffect } from "react";
-function Edit({showModal,setShowModal,selectedMovie}) {  
+function Edit({showModal,setShowModal,selectedMovie,getMovies}) {  
     console.log(showModal)// false
     const [movieName, setMovieName] = useState("");
-      const [moviePoster, setMoviePoster] = useState("");
-      const [movieRating, setMovieRating] = useState("");
-      const [movieSummary, setMovieSummary] = useState("");
+    const [moviePoster, setMoviePoster] = useState("");
+    const [movieRating, setMovieRating] = useState("");
+    const [movieSummary, setMovieSummary] = useState("");
     
 
     // modal to load
@@ -31,14 +31,30 @@ function Edit({showModal,setShowModal,selectedMovie}) {
     const handleClose=()=>{
         setShowModal(false)
     }
-    const handleUpdate=()=>{
-        console.log("Updation to Server in progress...."
+    const handleUpdate=async()=>{
+        console.log("Updation to Server in progress for the Id No....",selectedMovie.id)
+        const updateMovie={
+            moviename:movieName,
+            movieposter:moviePoster,
+            rating:movieRating,
+            summary:movieSummary,
+        }
             // 1- We have to make an API Call >> to the server
+            // `https://67d541d4d2c7857431efd3a5.mockapi.io/movies/${selectedMovie.id}`
+            // id >> ?
+
+            let data=await fetch(`https://67d541d4d2c7857431efd3a5.mockapi.io/movies/${selectedMovie.id}`,{
+                method:"PUT",
+                headers:{"Content-Type":"application/json"},
+                body:JSON.stringify(updateMovie)// pass the updation to the server
+            })
+            let res=await data.json()
+            console.log(res)
 
             // 2- update to the browser
-
-
-        )
+            setShowModal(false)
+            getMovies()
+        
     }
 
     if(showModal==false) return null;  
