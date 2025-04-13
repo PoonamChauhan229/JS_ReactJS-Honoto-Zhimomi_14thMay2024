@@ -5,6 +5,7 @@
 
 import { useState,useEffect } from "react";
 function Edit({showModal,setShowModal,selectedMovie,getMovies}) {  
+    // edit + update
     console.log(showModal)// false
     const [movieName, setMovieName] = useState("");
     const [moviePoster, setMoviePoster] = useState("");

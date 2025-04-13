@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Edit from "./Edit";
 
 function Read({movies,setMovies}) {
+
+  // Delete +read
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [showModal,setShowModal]=useState(false)
 
@@ -30,6 +32,9 @@ function Read({movies,setMovies}) {
 
   return (
     <>
+
+  
+
       <h3 className="text-center text-decoration-underline text-primary">Get All Movies</h3>
       <table className="table table-striped container-fluid text-center" style={{ width: "75%" }}>
         <thead>
