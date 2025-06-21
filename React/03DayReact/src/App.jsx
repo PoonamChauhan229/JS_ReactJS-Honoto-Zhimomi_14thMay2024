@@ -88,32 +88,32 @@ function App() {
   ]
  
   return (
-    <>
-      <APIcall/>
-    </>
     // <>
-   
-    // <NavBar/>
-    // <AddColor/>
-    // <ColorBox/>
-    
-    // {/* <Services/>
-    //  <Header/>
-    // <MovieDisplay movie={movie}/> */}
-
-    // <Routes>
-    //   {/* 2 props  > arguments  args*/}
-    //   {/* we are passing a component home component
-    //     to a route component as a props
-
-    //     And to the Home component we are array of objects i.e movie as a props 
-    //   */}
-    //   <Route path='/' element={<Home movie={movie}/>}/> 
-    //   <Route path='/about' element={<About/>}/>
-    //   <Route path='/services' element={<Services movie={movie} title="MovieTitles"/>}/> 
-    //   <Route path='/addmovie' element={<AddMovie allmovies={movie}/>}/> 
-    // </Routes>
+    //   <APIcall/>
     // </>
+    <>
+   
+    <NavBar/>
+    <AddColor/>
+    <ColorBox/>
+    
+    {/* <Services/>
+     <Header/>
+    <MovieDisplay movie={movie}/> */}
+
+    <Routes>
+      {/* 2 props  > arguments  args*/}
+      {/* we are passing a component home component
+        to a route component as a props
+
+        And to the Home component we are array of objects i.e movie as a props 
+      */}
+      <Route path='/' element={<Home movie={movie}/>}/> 
+      <Route path='/about' element={<About/>}/>
+      <Route path='/services' element={<Services movie={movie} title="MovieTitles"/>}/> 
+      <Route path='/addmovie' element={<AddMovie allmovies={movie}/>}/> 
+    </Routes>
+    </>
   )
 }
 

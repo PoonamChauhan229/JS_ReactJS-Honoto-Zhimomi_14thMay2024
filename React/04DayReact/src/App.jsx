@@ -22,8 +22,8 @@ import Trailer from './Components/Trailer'
 // Entity >> Button >>Link tag >>not advisable >> Operation >> useNavigate
 // onclick >> useNavigate()
 function App() {  
-    const [movies, setMovies] = useState([]);  
-    const navigate= useNavigate()    
+     const navigate= useNavigate()  
+    const [id,setId]=useState('9')  
 
    
   return (
@@ -42,8 +42,12 @@ function App() {
       </button>
 
       <Link to='/paramscrud/Armenia'>ParamsCrud</Link>
+      <br/>
+      <hr/>
 
-      <Link to='/movie/4'>Get MOvie</Link>
+      <Link to={`/apicall/${id}`}>API</Link>
+
+      <hr/>
       {/* 4 || 7 || 13 ||12 ||20 >>> total no of movies */}
 
       {/* Link +Routing */}
@@ -71,7 +75,7 @@ function App() {
         {/*  */}
 
         <Route path='/paramscrud/:holiday' element={<Params/>}/>
-        {/* <Route path='/movie/:id' element={<Apicall/>}/> */}
+        <Route path='/apicall/:id' element={<Apicall setId={setId}/>}/>
 
         <Route path='/trailer' element={<Trailer/>}/>
       </Routes>
