@@ -241,25 +241,7 @@ addition()
 addition()
 addition()
 
-.myContainer{
-    display: flex; >>
-    justify-content: space-between; >>
-    align-items: center; >>
-    height: 3.3rem;
-    margin: 0.4rem;
-    border-radius: 0.3rem; >>
-    background-color: rgba(0, 0, 0, 0.585); >>
-}
-
-Boostrap
-d-flex justify-content-between align-items-center bg-dark rounded
-brealpoints
-sm >> small mobile
-md  >> mobile
-lg >>tablet 
-xl >>laptop
-xxl >>deskatops
 
 
-Redux >>
-Material UI >>
+
+

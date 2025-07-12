@@ -12,9 +12,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+import TheaterComedyRoundedIcon from '@mui/icons-material/TheaterComedyRounded';
+import AnimationRoundedIcon from '@mui/icons-material/AnimationRounded';
+const pages = ['Products', 'Pricing', 'Blog',"Contact","About","Home","Services","Features","Pricing"];
+const settings = ["Dashboard ",'Profile', 'Account', "Info",'Logout'];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -39,7 +40,10 @@ function NavBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          
+          <AnimationRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: -1 ,fontSize: 40}} />
+          <TheaterComedyRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, mt:2,fontSize: 35,color:"black" }} />
+
           <Typography
             variant="h6"
             noWrap
@@ -55,7 +59,7 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            PLEX TV
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -85,9 +89,9 @@ function NavBar() {
               onClose={handleCloseNavMenu}
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+              {pages.map((element) => (
+                <MenuItem key={element} onClick={handleCloseNavMenu}>
+                  <Typography sx={{ textAlign: 'center' }}>{element}</Typography>
                 </MenuItem>
               ))}
             </Menu>
