@@ -3,6 +3,7 @@ import NavBar from './components/NavBar'
 import CardTest from './components/CardTest'
 import { Box, Container } from '@mui/material'
 
+
 function App() {  
     
    
@@ -16,7 +17,7 @@ function App() {
         {Array(15).fill(<CardTest/>)}
       </Box>
       </Container>
-      </>
+    </>
   
   )
 }

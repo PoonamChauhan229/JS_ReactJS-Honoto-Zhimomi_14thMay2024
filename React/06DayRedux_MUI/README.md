@@ -33,10 +33,13 @@ xxl >>deskatops
 Redux >>
 Material UI >>
 
-BoilerPlate >> Remembering >>Redux ToolKit
+BoilerPlate >> Remembering >>Redux ToolKit >> Insatllations
 
 configureStore   >>configureStore()
+const store=configureStore({})
+
 createSlice      >>createSlice()
+const counterSlice=createSlice()
 
 Slice is a part of Store 
     >> put all the slices in store 

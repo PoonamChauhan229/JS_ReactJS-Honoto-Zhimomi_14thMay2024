@@ -17,3 +17,21 @@ const store=configureStore({
 
 export default store
 
+// 2 slices >> n slices 
+// userSlice >> Provide to the store
+//  faq >> create array of object >> remove repition
+
+// >> context API >> useContext >> Context 
+// >> userContext >> Provider >> Consumer
+
+// user
+//add name
+//remove name
+//change name
+
+//cartslice
+//additem single
+//removeitem single
+//clearcart empty
+
+
