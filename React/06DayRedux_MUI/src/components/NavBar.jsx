@@ -14,10 +14,19 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import TheaterComedyRoundedIcon from '@mui/icons-material/TheaterComedyRounded';
 import AnimationRoundedIcon from '@mui/icons-material/AnimationRounded';
-const pages = ['Products', 'Pricing', 'Blog',"Contact","About","Home","Services","Features","Pricing"];
+import HotTubIcon from '@mui/icons-material/HotTub';
+import { useSelector } from 'react-redux';
+
+
+const pages = ["Home","Services","Features","Pricing"];
 const settings = ["Dashboard ",'Profile', 'Account', "Info",'Logout'];
 
 function NavBar() {
+  // Take the updated state from the store
+  const value=useSelector((store)=>store.counter.value)
+  console.log("Printing from Navbar",value)
+
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -126,7 +135,12 @@ function NavBar() {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+
+           <HotTubIcon sx={{fontSize:40}}/> 
+           <span style={{fontSize:"50px",fontWeight:"bolder",color:"navy"}}>{value}</span>
+
+
+          <Box sx={{ flexGrow: 0 ,ml:2}}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />

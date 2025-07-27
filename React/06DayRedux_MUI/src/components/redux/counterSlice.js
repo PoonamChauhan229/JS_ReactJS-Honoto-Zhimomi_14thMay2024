@@ -18,13 +18,28 @@ export const counterSlice=createSlice({
      initialState,
     //  collection of action
      reducers:{
-                increment:()=>{},
-                decrement:()=>{},
-                reset:()=>{}
+                increment:(state,action)=>{
+                    // state.value+=1
+                    state.value++
+                    // console.log("increment",state.value)
+                },
+                decrement:(state,action)=>{
+                    // state.value-=1
+                    state.value--   
+                    // console.log("decrement",state.value)
+                },
+                reset:(state,action)=>{
+                    state.value=0
+                    // console.log("reset",state.value)
+                },
+                times:(state,action)=>{
+                    state.value*=2;
+                    // console.log("times",state.value);
+                }
              }
 })
 
-export const {increment,decrement,reset}=counterSlice.actions
+export const {increment,decrement,reset,times}=counterSlice.actions
 export default counterSlice.reducer
 
 

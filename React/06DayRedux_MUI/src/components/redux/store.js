@@ -6,7 +6,7 @@
 
 
 import { configureStore } from "@reduxjs/toolkit";
-import { counterSlice } from "./counterSlice"; // named import
+import  counterSlice  from "./counterSlice"; // named import
 
 const store=configureStore({
     reducer:{        

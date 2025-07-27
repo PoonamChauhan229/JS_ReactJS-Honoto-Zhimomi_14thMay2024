@@ -58,3 +58,27 @@ Provider component >>App.jsx (Root Component)
 redux
 utilis
 store
+
+
+redux >> 2parts
+1 part >> action(app) >> store >>store updated
+2 part >> store >> app(value|| state )
+
+counter >>
+useState
+useReducer
+
+common >> incremet| decrement |reset |times >> see in browser 
+
+1 part 
+updating the store and hence not able to c in browser
+2 part
+update the app and u will c in broswer
+
+PubSub >> Context API  >> Create a Context || Provider || useContext 
+Publish || SUbscribe 
+
+Youtube || Media Channels
+Publish >> User >> Subscribe 
+
+Redux >> Creating a store(slice>action+reducer) || Provider || useSelector
