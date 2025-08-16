@@ -9,7 +9,7 @@ import { IconButton } from '@mui/material';
 import CrueltyFreeIcon from '@mui/icons-material/CrueltyFree';
 import AddIcon from '@mui/icons-material/Add';
 import { useDispatch, useSelector } from 'react-redux';
-import {increment, decrement, reset, times} from './redux/CounterSlice'
+import {increment, decrement, reset, times} from '../redux/CounterSlice'
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
 import CancelIcon from '@mui/icons-material/Cancel';
@@ -51,7 +51,7 @@ export default function CardTest() {
             {value >0 && 
             <IconButton color="primary" aria-label=""
             onClick={()=>{
-                dispatch(decrement("test2"));
+                dispatch(decrement());
             }}
             >
                 <CrueltyFreeIcon color="secondary" sx={{fontSize:30}}/>
@@ -65,7 +65,7 @@ export default function CardTest() {
                 <>
                     <IconButton color="error" aria-label=""
                     onClick={()=>{
-                        dispatch(reset("test-reset"));
+                        dispatch(reset());
                     }}
                     >
                         <CrueltyFreeIcon color="secondary" sx={{fontSize:30}}/>

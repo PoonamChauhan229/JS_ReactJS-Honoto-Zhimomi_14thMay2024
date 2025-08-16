@@ -16,6 +16,7 @@ import TheaterComedyRoundedIcon from '@mui/icons-material/TheaterComedyRounded';
 import AnimationRoundedIcon from '@mui/icons-material/AnimationRounded';
 import HotTubIcon from '@mui/icons-material/HotTub';
 import { useSelector } from 'react-redux';
+import HourglassFullIcon from "@mui/icons-material/HourglassFull";
 
 
 const pages = ["Home","Services","Features","Pricing"];
@@ -136,8 +137,11 @@ function NavBar() {
             ))}
           </Box>
 
-           <HotTubIcon sx={{fontSize:40}}/> 
+           <HotTubIcon sx={{fontSize:40,color:"navy"}}/> 
            <span style={{fontSize:"50px",fontWeight:"bolder",color:"navy"}}>{value}</span>
+           <HourglassFullIcon sx={{fontSize:40 , color:"yellow"}}/>
+           <span style={{fontSize:"50px",fontWeight:"bolder",color:"yellow"}}>{0}</span>
+
 
 
           <Box sx={{ flexGrow: 0 ,ml:2}}>

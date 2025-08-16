@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 const Test = () => {
 
-const value=useSelector((store)=>store.counter.value)
+const value=useSelector((store)=>store.counter.test) // logic store.counter.value    store.counter.test
 console.log("Printing from test",value)
   return (
     <div
