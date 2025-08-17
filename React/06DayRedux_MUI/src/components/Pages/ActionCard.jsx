@@ -10,7 +10,7 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
 import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/cartSlice";
+import { addToCart, emptyCart } from "../redux/cartSlice";
 
 
 export default function ActionCard({ title, producer, poster,element}) {
@@ -34,6 +34,7 @@ export default function ActionCard({ title, producer, poster,element}) {
           {/* Actions  */}
           <Typography>
             <IconButton aria-label="" onClick={() => {
+              // console.log("Btn",element)
               dispatch(addToCart(element))
             }}>
               <AddShoppingCartIcon color="secondary" sx={{ fontSize: 23 }} />
@@ -41,7 +42,9 @@ export default function ActionCard({ title, producer, poster,element}) {
             <IconButton aria-label="" onClick={() => {}}>
               <RemoveShoppingCartIcon color="primary" sx={{ fontSize: 23 }} />
             </IconButton>
-            <IconButton aria-label="" onClick={() => {}}>
+            <IconButton aria-label="" onClick={() => {
+              dispatch(emptyCart())
+            }}>
               <ProductionQuantityLimitsIcon color="warning" sx={{ fontSize: 23 }} />
             </IconButton>
           </Typography>

@@ -33,10 +33,13 @@ export const counterSlice=createSlice({
                 },
                 reset:(state,action)=>{
                     state.value=0
+                      state.test="" 
                     // console.log("reset",state.value)
                 },
                 times:(state,action)=>{
                     state.value*=2;
+                      state.test="Multiplied" 
+                  
                     // console.log("times",state.value);
                 }
              }

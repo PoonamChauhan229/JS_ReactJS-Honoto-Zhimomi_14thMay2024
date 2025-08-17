@@ -5,6 +5,7 @@ import Test from './components/Pages/Test'
 import BoxCard from './components/Pages/BoxCard'
 import ActionCard from './components/Pages/ActionCard'
 import ActionDisplay from './components/Pages/ActionDisplay'
+import CartPage from './components/Pages/CartPage'
 
 function App() {  
     
@@ -23,6 +24,8 @@ function App() {
       <ActionDisplay/>
     </Container>
 
+
+<CartPage/>
     </>
   
   )
